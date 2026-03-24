@@ -111,9 +111,8 @@ body {
 
 .hero-inner {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: 1fr 1fr;
-  align-items: center; gap: 0;
-  width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 60px;
+  display: flex; align-items: center;
+  width: 100%; max-width: 900px; margin: 0 auto; padding: 0 60px;
 }
 
 .hero-text { animation: fadeUp 1s ease both; }
@@ -127,7 +126,7 @@ body {
 }
 .hero-h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(3.5rem, 8vw, 7rem);
   font-weight: 300; line-height: 1.08; letter-spacing: -0.01em;
   color: var(--ink); margin-bottom: 12px;
 }
@@ -802,14 +801,7 @@ button, a { touch-action: manipulation; }
         <a class="cta-g" href="#schedule">대관 시간표</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-frame">
-        <div class="hero-frame-inner">
-          <div class="hero-glyph">B</div>
-        </div>
 
-      </div>
-    </div>
   </div>
 </section>
 
@@ -824,7 +816,7 @@ button, a { touch-action: manipulation; }
             <span class="upload-hint-icon">🏛</span>
             <span class="upload-hint-txt">학원 공간 사진</span>
           </div>
-          <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-about','img-about')" onclick="event.stopPropagation()">
+          <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-about','img-about')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
         </div>
 
       </div>
@@ -856,7 +848,7 @@ button, a { touch-action: manipulation; }
           <span class="upload-hint-icon">🎭</span>
           <span class="upload-hint-txt">화이트홀 메인 사진</span>
         </div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-hall1','img-hall1')" onclick="event.stopPropagation()">
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-hall1','img-hall1')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
       </div>
       <div class="photo-slot" id="slot-hall2" onclick="guardedUpload('slot-hall2')" style="border-radius:0;">
         <img id="img-hall2" src="" alt="" style="display:none;">
@@ -864,7 +856,7 @@ button, a { touch-action: manipulation; }
           <span class="upload-hint-icon">🪞</span>
           <span class="upload-hint-txt">거울 / 바 공간</span>
         </div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-hall2','img-hall2')" onclick="event.stopPropagation()">
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-hall2','img-hall2')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
       </div>
       <div class="photo-slot" id="slot-hall3" onclick="guardedUpload('slot-hall3')" style="border-radius:0;">
         <img id="img-hall3" src="" alt="" style="display:none;">
@@ -872,7 +864,7 @@ button, a { touch-action: manipulation; }
           <span class="upload-hint-icon">📷</span>
           <span class="upload-hint-txt">공간 세부 사진</span>
         </div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-hall3','img-hall3')" onclick="event.stopPropagation()">
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-hall3','img-hall3')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
       </div>
     </div>
   </div>
@@ -919,7 +911,7 @@ button, a { touch-action: manipulation; }
           <span class="upload-hint-icon">🩰</span>
           <span class="upload-hint-txt">수업 사진 1</span>
         </div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class1','img-class1')" onclick="event.stopPropagation()">
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class1','img-class1')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
       </div>
       <div class="photo-slot" id="slot-class2" onclick="guardedUpload('slot-class2')">
         <img id="img-class2" src="" alt="" style="display:none;">
@@ -927,7 +919,7 @@ button, a { touch-action: manipulation; }
           <span class="upload-hint-icon">🩰</span>
           <span class="upload-hint-txt">수업 사진 2</span>
         </div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class2','img-class2')" onclick="event.stopPropagation()">
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class2','img-class2')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
       </div>
       <div class="photo-slot" id="slot-class3" onclick="guardedUpload('slot-class3')">
         <img id="img-class3" src="" alt="" style="display:none;">
@@ -935,7 +927,7 @@ button, a { touch-action: manipulation; }
           <span class="upload-hint-icon">🩰</span>
           <span class="upload-hint-txt">수업 사진 3</span>
         </div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class3','img-class3')" onclick="event.stopPropagation()">
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class3','img-class3')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
       </div>
     </div>
   </div>
@@ -955,7 +947,7 @@ button, a { touch-action: manipulation; }
           <div class="photo-slot" id="slot-teacher1" onclick="guardedUpload('slot-teacher1')" style="height:100%;">
             <img id="img-teacher1" src="" alt="" style="display:none;">
             <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher1','img-teacher1')" onclick="event.stopPropagation()">
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher1','img-teacher1')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
           </div>
         </div>
         <div class="teacher-name">이은주 원장</div>
@@ -980,7 +972,7 @@ button, a { touch-action: manipulation; }
           <div class="photo-slot" id="slot-teacher2" onclick="guardedUpload('slot-teacher2')" style="height:100%;">
             <img id="img-teacher2" src="" alt="" style="display:none;">
             <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher2','img-teacher2')" onclick="event.stopPropagation()">
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher2','img-teacher2')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
           </div>
         </div>
         <div class="teacher-name">국찬우 강사</div>
@@ -1005,7 +997,7 @@ button, a { touch-action: manipulation; }
           <div class="photo-slot" id="slot-teacher3" onclick="guardedUpload('slot-teacher3')" style="height:100%;">
             <img id="img-teacher3" src="" alt="" style="display:none;">
             <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher3','img-teacher3')" onclick="event.stopPropagation()">
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher3','img-teacher3')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
           </div>
         </div>
         <div class="teacher-name">김민영 강사</div>
@@ -1030,7 +1022,7 @@ button, a { touch-action: manipulation; }
           <div class="photo-slot" id="slot-teacher4" onclick="guardedUpload('slot-teacher4')" style="height:100%;">
             <img id="img-teacher4" src="" alt="" style="display:none;">
             <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher4','img-teacher4')" onclick="event.stopPropagation()">
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher4','img-teacher4')" onclick="if(!_isAdmin){event.preventDefault();event.stopPropagation();return false;}event.stopPropagation();">
           </div>
         </div>
         <div class="teacher-name">이예진 강사</div>
