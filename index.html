@@ -2969,13 +2969,37 @@
       <div class="modal-box">
         <button class="modal-x" id="close-login">✕</button>
         <div class="modal-ttl">관리자 로그인</div>
-        <p class="modal-sub">대관 시간표 관리 패널에 접근합니다.</p>
+        <p class="modal-sub">관리자 계정으로 로그인하세요.</p>
+        <div class="f">
+          <label>이메일</label>
+          <input
+            type="email"
+            id="admin-email"
+            placeholder="이메일 주소"
+            autocomplete="email"
+            style="-webkit-appearance: none"
+          />
+        </div>
         <div class="f">
           <label>비밀번호</label>
-          <input type="password" id="pw" placeholder="비밀번호를 입력하세요" />
+          <input
+            type="password"
+            id="pw"
+            placeholder="비밀번호"
+            autocomplete="current-password"
+            style="-webkit-appearance: none"
+          />
         </div>
-        <p class="modal-err" id="login-err">비밀번호가 올바르지 않습니다.</p>
-        <button class="modal-btn" id="login-btn">로그인</button>
+        <p class="modal-err" id="login-err">
+          이메일 또는 비밀번호가 올바르지 않습니다.
+        </p>
+        <button
+          class="modal-btn"
+          id="login-btn"
+          style="touch-action: manipulation"
+        >
+          로그인
+        </button>
       </div>
     </div>
 
@@ -3180,8 +3204,6 @@
       const SUPABASE_URL = "https://aewjaqzuqnyaarbvzkth.supabase.co";
       const SUPABASE_KEY = "sb_publishable_4kr2MqOtfJcuhCYIlevNnQ_bvCVQi4L";
       /* ══════════════════════════════════════════ */
-
-      const ADMIN_PW = "royal2024"; // 관리자 비밀번호 변경 가능
 
       const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -3497,54 +3519,90 @@
         renderPub();
       };
 
-      /* ── AUTH ── */
+      /* ── AUTH (Supabase Auth) ── */
+      function openAdminPanel() {
+        _isAdmin = true;
+        document
+          .querySelectorAll(".photo-slot")
+          .forEach((el) => el.classList.add("admin-active"));
+        apW = monday(new Date());
+        renderAP();
+        renderFixed();
+        document.getElementById("ap").classList.add("open");
+      }
+
+      function closeAdminPanel(logout) {
+        if (logout) {
+          _isAdmin = false;
+          document
+            .querySelectorAll(".photo-slot")
+            .forEach((el) => el.classList.remove("admin-active"));
+          _supabase.auth.signOut();
+        }
+        document.getElementById("ap").classList.remove("open");
+        renderPub();
+      }
+
+      // 이미 로그인된 세션 확인
+      _supabase.auth.getSession().then(({ data }) => {
+        if (data.session) openAdminPanel();
+      });
+
       document
         .getElementById("open-login")
         .addEventListener("click", function () {
           document.getElementById("login-modal").classList.add("open");
+          document.getElementById("admin-email").value = "";
           document.getElementById("pw").value = "";
           document.getElementById("login-err").style.display = "none";
-          setTimeout(() => document.getElementById("pw").focus(), 100);
+          setTimeout(() => document.getElementById("admin-email").focus(), 150);
         });
+
       document
         .getElementById("close-login")
         .addEventListener("click", function () {
           document.getElementById("login-modal").classList.remove("open");
         });
-      // dummy to replace original
 
-      document.getElementById("login-btn").onclick = () => {
-        if (document.getElementById("pw").value === ADMIN_PW) {
+      document
+        .getElementById("login-btn")
+        .addEventListener("click", async function () {
+          const email = document.getElementById("admin-email").value.trim();
+          const password = document.getElementById("pw").value;
+          if (!email || !password) {
+            document.getElementById("login-err").style.display = "block";
+            return;
+          }
+
+          document.getElementById("login-btn").textContent = "로그인 중...";
+          document.getElementById("login-btn").disabled = true;
+
+          const { error } = await _supabase.auth.signInWithPassword({
+            email,
+            password,
+          });
+
+          document.getElementById("login-btn").textContent = "로그인";
+          document.getElementById("login-btn").disabled = false;
+
+          if (error) {
+            document.getElementById("login-err").style.display = "block";
+            return;
+          }
           document.getElementById("login-modal").classList.remove("open");
-          _isAdmin = true;
-          apW = monday(new Date());
-          renderAP();
-          renderFixed();
-          document.getElementById("ap").classList.add("open");
-          // 관리자 로그인 후 업로드 힌트 표시
-          document
-            .querySelectorAll(".photo-slot")
-            .forEach((el) => el.classList.add("admin-active"));
-        } else {
-          document.getElementById("login-err").style.display = "block";
-        }
-      };
+          openAdminPanel();
+        });
+
       document.getElementById("pw").addEventListener("keydown", (e) => {
         if (e.key === "Enter") document.getElementById("login-btn").click();
       });
-      document.getElementById("logout-btn").onclick = () => {
-        _isAdmin = false;
-        document
-          .querySelectorAll(".photo-slot")
-          .forEach((el) => el.classList.remove("admin-active"));
-        document.getElementById("ap").classList.remove("open");
-        renderPub();
-      };
-      document.getElementById("close-ap").onclick = () => {
-        // _isAdmin 유지 — 패널 닫아도 로그인 상태 유지, 사진 업로드 가능
-        document.getElementById("ap").classList.remove("open");
-        renderPub();
-      };
+
+      document
+        .getElementById("logout-btn")
+        .addEventListener("click", () => closeAdminPanel(true));
+      document
+        .getElementById("close-ap")
+        .addEventListener("click", () => closeAdminPanel(false));
 
       /* ── HAMBURGER / DRAWER ── */
       const hamburger = document.getElementById("hamburger");
