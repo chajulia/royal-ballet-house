@@ -688,7 +688,7 @@ body {
 .photo-slot {
   position: relative; overflow: hidden;
   background: linear-gradient(145deg, #f5e0e2, #eedde0);
-  cursor: pointer;
+  cursor: default;
 }
 .photo-slot img {
   width: 100%; height: 100%;
@@ -818,7 +818,7 @@ button, a { touch-action: manipulation; }
   <div class="wrap">
     <div class="about-grid">
       <div style="position:relative;">
-        <div class="about-img photo-slot" id="slot-about" onclick="triggerUpload('slot-about')" style="height:520px;">
+        <div class="about-img photo-slot" id="slot-about" onclick="guardedUpload('slot-about')" style="height:520px;">
           <img id="img-about" src="" alt="" style="display:none;">
           <div class="upload-hint">
             <span class="upload-hint-icon">🏛</span>
@@ -850,7 +850,7 @@ button, a { touch-action: manipulation; }
     <h2 class="sec-h2">화이트홀 <em>공간</em></h2>
     <div class="rule"></div>
     <div class="gallery-grid">
-      <div class="photo-slot" id="slot-hall1" onclick="triggerUpload('slot-hall1')" style="border-radius:0;">
+      <div class="photo-slot" id="slot-hall1" onclick="guardedUpload('slot-hall1')" style="border-radius:0;">
         <img id="img-hall1" src="" alt="" style="display:none;">
         <div class="upload-hint">
           <span class="upload-hint-icon">🎭</span>
@@ -858,7 +858,7 @@ button, a { touch-action: manipulation; }
         </div>
         <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-hall1','img-hall1')" onclick="event.stopPropagation()">
       </div>
-      <div class="photo-slot" id="slot-hall2" onclick="triggerUpload('slot-hall2')" style="border-radius:0;">
+      <div class="photo-slot" id="slot-hall2" onclick="guardedUpload('slot-hall2')" style="border-radius:0;">
         <img id="img-hall2" src="" alt="" style="display:none;">
         <div class="upload-hint">
           <span class="upload-hint-icon">🪞</span>
@@ -866,7 +866,7 @@ button, a { touch-action: manipulation; }
         </div>
         <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-hall2','img-hall2')" onclick="event.stopPropagation()">
       </div>
-      <div class="photo-slot" id="slot-hall3" onclick="triggerUpload('slot-hall3')" style="border-radius:0;">
+      <div class="photo-slot" id="slot-hall3" onclick="guardedUpload('slot-hall3')" style="border-radius:0;">
         <img id="img-hall3" src="" alt="" style="display:none;">
         <div class="upload-hint">
           <span class="upload-hint-icon">📷</span>
@@ -913,7 +913,7 @@ button, a { touch-action: manipulation; }
 
     <!-- 수업 사진 -->
     <div class="class-strip" style="margin-top:40px;">
-      <div class="photo-slot" id="slot-class1" onclick="triggerUpload('slot-class1')">
+      <div class="photo-slot" id="slot-class1" onclick="guardedUpload('slot-class1')">
         <img id="img-class1" src="" alt="" style="display:none;">
         <div class="upload-hint">
           <span class="upload-hint-icon">🩰</span>
@@ -921,7 +921,7 @@ button, a { touch-action: manipulation; }
         </div>
         <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class1','img-class1')" onclick="event.stopPropagation()">
       </div>
-      <div class="photo-slot" id="slot-class2" onclick="triggerUpload('slot-class2')">
+      <div class="photo-slot" id="slot-class2" onclick="guardedUpload('slot-class2')">
         <img id="img-class2" src="" alt="" style="display:none;">
         <div class="upload-hint">
           <span class="upload-hint-icon">🩰</span>
@@ -929,7 +929,7 @@ button, a { touch-action: manipulation; }
         </div>
         <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class2','img-class2')" onclick="event.stopPropagation()">
       </div>
-      <div class="photo-slot" id="slot-class3" onclick="triggerUpload('slot-class3')">
+      <div class="photo-slot" id="slot-class3" onclick="guardedUpload('slot-class3')">
         <img id="img-class3" src="" alt="" style="display:none;">
         <div class="upload-hint">
           <span class="upload-hint-icon">🩰</span>
@@ -952,7 +952,7 @@ button, a { touch-action: manipulation; }
       <!-- 이은주 원장 -->
       <div class="teacher-card">
         <div class="teacher-photo-wrap">
-          <div class="photo-slot" id="slot-teacher1" onclick="triggerUpload('slot-teacher1')" style="height:100%;">
+          <div class="photo-slot" id="slot-teacher1" onclick="guardedUpload('slot-teacher1')" style="height:100%;">
             <img id="img-teacher1" src="" alt="" style="display:none;">
             <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
             <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher1','img-teacher1')" onclick="event.stopPropagation()">
@@ -977,7 +977,7 @@ button, a { touch-action: manipulation; }
       <!-- 국찬우 강사 -->
       <div class="teacher-card">
         <div class="teacher-photo-wrap">
-          <div class="photo-slot" id="slot-teacher2" onclick="triggerUpload('slot-teacher2')" style="height:100%;">
+          <div class="photo-slot" id="slot-teacher2" onclick="guardedUpload('slot-teacher2')" style="height:100%;">
             <img id="img-teacher2" src="" alt="" style="display:none;">
             <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
             <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher2','img-teacher2')" onclick="event.stopPropagation()">
@@ -1002,7 +1002,7 @@ button, a { touch-action: manipulation; }
       <!-- 김민영 강사 -->
       <div class="teacher-card">
         <div class="teacher-photo-wrap">
-          <div class="photo-slot" id="slot-teacher3" onclick="triggerUpload('slot-teacher3')" style="height:100%;">
+          <div class="photo-slot" id="slot-teacher3" onclick="guardedUpload('slot-teacher3')" style="height:100%;">
             <img id="img-teacher3" src="" alt="" style="display:none;">
             <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
             <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher3','img-teacher3')" onclick="event.stopPropagation()">
@@ -1027,7 +1027,7 @@ button, a { touch-action: manipulation; }
       <!-- 이예진 강사 -->
       <div class="teacher-card">
         <div class="teacher-photo-wrap">
-          <div class="photo-slot" id="slot-teacher4" onclick="triggerUpload('slot-teacher4')" style="height:100%;">
+          <div class="photo-slot" id="slot-teacher4" onclick="guardedUpload('slot-teacher4')" style="height:100%;">
             <img id="img-teacher4" src="" alt="" style="display:none;">
             <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
             <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher4','img-teacher4')" onclick="event.stopPropagation()">
@@ -1269,9 +1269,18 @@ button, a { touch-action: manipulation; }
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-/* ── CONFIG ── */
-const ADMIN_PW = 'royal2024'; // 비밀번호 변경 가능
+/* ══════════════════════════════════════════
+   ⚠️  아래 두 줄에 본인 Supabase 값을 입력하세요
+══════════════════════════════════════════ */
+const SUPABASE_URL  = 'YOUR_SUPABASE_URL';
+const SUPABASE_KEY  = 'YOUR_SUPABASE_ANON_KEY';
+/* ══════════════════════════════════════════ */
+
+const ADMIN_PW = 'royal2024'; // 관리자 비밀번호 변경 가능
+
+const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 /* ── TIME SLOTS: 09:00 ~ 21:00, 30분 단위 ── */
 const TIMES = [];
@@ -1281,10 +1290,26 @@ for (let h = 9; h <= 21; h++) {
 }
 function pad(n) { return String(n).padStart(2, '0'); }
 
-/* ── STORAGE ── */
-const KEY = 'rbh_bookings_v2';
-const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; } };
-const save = d => localStorage.setItem(KEY, JSON.stringify(d));
+/* ── SUPABASE API ── */
+async function dbLoad(dateFrom, dateTo) {
+  const { data, error } = await _supabase
+    .from('bookings')
+    .select('*')
+    .gte('date', dateFrom)
+    .lte('date', dateTo);
+  if (error) { console.error(error); return []; }
+  return data || [];
+}
+async function dbInsert(row) {
+  const { error } = await _supabase.from('bookings').insert([row]);
+  if (error) { alert('저장 실패: ' + error.message); return false; }
+  return true;
+}
+async function dbDelete(id) {
+  const { error } = await _supabase.from('bookings').delete().eq('id', id);
+  if (error) { alert('삭제 실패: ' + error.message); return false; }
+  return true;
+}
 
 /* ── DATE UTILS ── */
 const DKO = ['일','월','화','수','목','금','토'];
@@ -1301,12 +1326,11 @@ function fmtW(w) { const e = addD(w,6); return `${w.getMonth()+1}월 ${w.getDate
 function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 /* ── BUILD TIMETABLE ── */
-function buildTT(week, headEl, bodyEl) {
+function buildTT(bks, week, headEl, bodyEl) {
   const days = Array.from({length:7}, (_,i) => addD(week,i));
   headEl.innerHTML = '<th class="tt-th0">시간</th>';
   days.forEach(d => { const th = document.createElement('th'); th.textContent = fmtD(d); headEl.appendChild(th); });
 
-  const bks = load();
   const lk = {};
   bks.forEach(b => (lk[b.date] ||= []).push(b));
 
@@ -1348,19 +1372,20 @@ function buildTT(week, headEl, bodyEl) {
 
 /* ── PUBLIC ── */
 let pubW = monday(new Date());
-function renderPub() {
+async function renderPub() {
   document.getElementById('pub-lbl').textContent = fmtW(pubW);
-  buildTT(pubW, document.getElementById('pub-head'), document.getElementById('pub-body'));
+  const bks = await dbLoad(iso(pubW), iso(addD(pubW,6)));
+  buildTT(bks, pubW, document.getElementById('pub-head'), document.getElementById('pub-body'));
 }
 document.getElementById('pub-prev').onclick = () => { pubW = addD(pubW,-7); renderPub(); };
 document.getElementById('pub-next').onclick = () => { pubW = addD(pubW, 7); renderPub(); };
 
 /* ── ADMIN ── */
 let apW = monday(new Date());
-function renderAP() {
+async function renderAP() {
   document.getElementById('ap-lbl').textContent = fmtW(apW);
   const ws = iso(apW), we = iso(addD(apW,6));
-  const bks = load().filter(b => b.date >= ws && b.date <= we)
+  const bks = (await dbLoad(ws, we))
     .sort((a,b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start));
   const list = document.getElementById('bk-list');
   list.innerHTML = '';
@@ -1377,7 +1402,11 @@ function renderAP() {
     list.appendChild(row);
   });
   list.querySelectorAll('.bk-del').forEach(btn => {
-    btn.onclick = () => { save(load().filter(b=>b.id!==btn.dataset.id)); renderAP(); renderPub(); };
+    btn.onclick = async () => {
+      if (!confirm('예약을 삭제할까요?')) return;
+      const ok = await dbDelete(btn.dataset.id);
+      if (ok) { renderAP(); renderPub(); }
+    };
   });
 }
 document.getElementById('ap-prev').onclick = () => { apW = addD(apW,-7); renderAP(); };
@@ -1392,20 +1421,29 @@ document.getElementById('ap-next').onclick = () => { apW = addD(apW, 7); renderA
   });
 });
 
-document.getElementById('add-btn').onclick = () => {
-  const date = document.getElementById('f-date').value;
-  const start = document.getElementById('f-start').value;
-  const end   = document.getElementById('f-end').value;
-  const name  = document.getElementById('f-name').value.trim();
+document.getElementById('add-btn').onclick = async () => {
+  const date    = document.getElementById('f-date').value;
+  const start   = document.getElementById('f-start').value;
+  const end     = document.getElementById('f-end').value;
+  const name    = document.getElementById('f-name').value.trim();
   const purpose = document.getElementById('f-purpose').value.trim();
   const contact = document.getElementById('f-contact').value.trim();
   if (!date||!start||!end||!name) { alert('날짜, 시작/종료 시간, 예약자명은 필수입니다.'); return; }
   if (start >= end) { alert('종료 시간은 시작 시간보다 늦어야 합니다.'); return; }
-  if (load().filter(b=>b.date===date).some(b => !(end<=b.start||start>=b.end))) { alert('해당 시간대에 이미 예약이 있습니다.'); return; }
-  save([...load(), {id:Date.now().toString(), date, start, end, name, purpose, contact}]);
+
+  /* 중복 체크 */
+  const existing = await dbLoad(date, date);
+  if (existing.some(b => !(end<=b.start||start>=b.end))) {
+    alert('해당 시간대에 이미 예약이 있습니다.'); return;
+  }
+
+  const ok = await dbInsert({ date, start, end, name, purpose, contact });
+  if (!ok) return;
+
   ['f-date','f-name','f-purpose','f-contact'].forEach(id=>document.getElementById(id).value='');
   ['f-start','f-end'].forEach(id=>document.getElementById(id).value='');
-  const ok = document.getElementById('add-ok'); ok.style.display='block'; setTimeout(()=>ok.style.display='none',2800);
+  const msg = document.getElementById('add-ok');
+  msg.style.display='block'; setTimeout(()=>msg.style.display='none',2800);
   renderAP(); renderPub();
 };
 
@@ -1420,14 +1458,21 @@ document.getElementById('close-login').onclick = () => document.getElementById('
 document.getElementById('login-btn').onclick = () => {
   if (document.getElementById('pw').value === ADMIN_PW) {
     document.getElementById('login-modal').classList.remove('open');
+    _isAdmin = true;
     apW = monday(new Date()); renderAP();
     document.getElementById('ap').classList.add('open');
+    // 관리자 로그인 후 업로드 힌트 표시
+    document.querySelectorAll('.photo-slot').forEach(el => el.style.cursor = 'pointer');
   } else {
     document.getElementById('login-err').style.display='block';
   }
 };
 document.getElementById('pw').addEventListener('keydown', e => { if(e.key==='Enter') document.getElementById('login-btn').click(); });
-document.getElementById('close-ap').onclick = () => { document.getElementById('ap').classList.remove('open'); renderPub(); };
+document.getElementById('close-ap').onclick = () => {
+  _isAdmin = false;
+  document.getElementById('ap').classList.remove('open');
+  renderPub();
+};
 
 /* ── HAMBURGER / DRAWER ── */
 const hamburger = document.getElementById('hamburger');
@@ -1456,38 +1501,63 @@ document.querySelectorAll('.drawer-link').forEach(a => a.addEventListener('click
 window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 40));
 
 
-/* ── PHOTO UPLOAD ── */
-function triggerUpload(slotId) {
+/* ── PHOTO UPLOAD (Supabase Storage) ── */
+let _isAdmin = false; // 관리자 로그인 여부
+
+// 관리자일 때만 업로드 허용
+function guardedUpload(slotId) {
+  if (!_isAdmin) return; // 비관리자는 클릭 무시
   document.querySelector('#' + slotId + ' input[type=file]').click();
 }
-function handlePhoto(input, slotId, imgId) {
+
+async function handlePhoto(input, slotId, imgId) {
+  if (!_isAdmin) return;
   const file = input.files[0];
   if (!file) return;
-  const reader = new FileReader();
-  reader.onload = e => {
-    const img = document.getElementById(imgId);
-    img.src = e.target.result;
-    img.style.display = 'block';
-    document.getElementById(slotId).classList.add('has-photo');
-    // persist to localStorage
-    try { localStorage.setItem('rbh_photo_' + slotId, e.target.result); } catch(_e) {}
-  };
-  reader.readAsDataURL(file);
+
+  // 파일명: 슬롯ID 기반으로 고정 (덮어쓰기 방식)
+  const ext = file.name.split('.').pop();
+  const path = `site/${slotId}.${ext}`;
+
+  // 기존 파일 삭제 후 업로드 (upsert)
+  const { error } = await _supabase.storage
+    .from('photos')
+    .upload(path, file, { upsert: true, contentType: file.type });
+
+  if (error) { alert('사진 업로드 실패: ' + error.message); return; }
+
+  // 공개 URL 가져와서 화면에 표시
+  const { data } = _supabase.storage.from('photos').getPublicUrl(path);
+  showPhoto(slotId, imgId, data.publicUrl + '?t=' + Date.now());
 }
-// restore saved photos on load
-(function restorePhotos() {
+
+function showPhoto(slotId, imgId, url) {
+  const img = document.getElementById(imgId);
+  if (!img) return;
+  img.src = url;
+  img.style.display = 'block';
+  document.getElementById(slotId).classList.add('has-photo');
+}
+
+// 페이지 로드 시 Supabase Storage에서 사진 복원
+async function restorePhotos() {
   const slots = ['about','hall1','hall2','hall3','class1','class2','class3','teacher1','teacher2','teacher3','teacher4'];
-  slots.forEach(s => {
-    const key = 'rbh_photo_slot-' + s;
-    try {
-      const data = localStorage.getItem(key);
-      if (data) {
-        const img = document.getElementById('img-' + s);
-        if (img) { img.src = data; img.style.display = 'block'; document.getElementById('slot-' + s).classList.add('has-photo'); }
-      }
-    } catch(e) {}
-  });
-})();
+  for (const s of slots) {
+    // jpg, png, webp, jpeg 순서로 시도
+    for (const ext of ['jpg','jpeg','png','webp']) {
+      const path = `site/slot-${s}.${ext}`;
+      const { data } = _supabase.storage.from('photos').getPublicUrl(path);
+      // HEAD 요청으로 파일 존재 여부 확인
+      try {
+        const res = await fetch(data.publicUrl, { method: 'HEAD' });
+        if (res.ok) {
+          showPhoto('slot-' + s, 'img-' + s, data.publicUrl + '?t=' + Date.now());
+          break;
+        }
+      } catch(_) {}
+    }
+  }
+}
 
 
 /* ── CLASS TIMETABLE TABS ── */
@@ -1502,6 +1572,7 @@ function switchTab(id) {
 
 /* ── INIT ── */
 renderPub();
+restorePhotos();
 </script>
 </body>
 </html>
