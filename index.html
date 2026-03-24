@@ -2008,9 +2008,14 @@
         position: absolute;
         inset: 0;
         opacity: 0;
-        cursor: pointer;
         width: 100%;
         height: 100%;
+        pointer-events: none;
+        cursor: default;
+      }
+      .photo-slot.admin-active input[type="file"] {
+        pointer-events: all;
+        cursor: pointer;
       }
 
       /* ─── SPACE GALLERY (화이트홀 + 학원 공간) ─── */
@@ -2136,7 +2141,6 @@
             <div
               class="about-img photo-slot"
               id="slot-about"
-              onclick="guardedUpload('slot-about')"
               style="height: 520px"
             >
               <img id="img-about" src="" alt="" style="display: none" />
@@ -2148,14 +2152,6 @@
                 type="file"
                 accept="image/*"
                 onchange="handlePhoto(this, 'slot-about', 'img-about')"
-                onclick="
-                  if (!_isAdmin) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    return false;
-                  }
-                  event.stopPropagation();
-                "
               />
             </div>
           </div>
@@ -2182,12 +2178,7 @@
         <h2 class="sec-h2">화이트홀 <em>공간</em></h2>
         <div class="rule"></div>
         <div class="gallery-grid">
-          <div
-            class="photo-slot"
-            id="slot-hall1"
-            onclick="guardedUpload('slot-hall1')"
-            style="border-radius: 0"
-          >
+          <div class="photo-slot" id="slot-hall1" style="border-radius: 0">
             <img id="img-hall1" src="" alt="" style="display: none" />
             <div class="upload-hint">
               <span class="upload-hint-icon">🎭</span>
@@ -2197,22 +2188,9 @@
               type="file"
               accept="image/*"
               onchange="handlePhoto(this, 'slot-hall1', 'img-hall1')"
-              onclick="
-                if (!_isAdmin) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  return false;
-                }
-                event.stopPropagation();
-              "
             />
           </div>
-          <div
-            class="photo-slot"
-            id="slot-hall2"
-            onclick="guardedUpload('slot-hall2')"
-            style="border-radius: 0"
-          >
+          <div class="photo-slot" id="slot-hall2" style="border-radius: 0">
             <img id="img-hall2" src="" alt="" style="display: none" />
             <div class="upload-hint">
               <span class="upload-hint-icon">🪞</span>
@@ -2222,22 +2200,9 @@
               type="file"
               accept="image/*"
               onchange="handlePhoto(this, 'slot-hall2', 'img-hall2')"
-              onclick="
-                if (!_isAdmin) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  return false;
-                }
-                event.stopPropagation();
-              "
             />
           </div>
-          <div
-            class="photo-slot"
-            id="slot-hall3"
-            onclick="guardedUpload('slot-hall3')"
-            style="border-radius: 0"
-          >
+          <div class="photo-slot" id="slot-hall3" style="border-radius: 0">
             <img id="img-hall3" src="" alt="" style="display: none" />
             <div class="upload-hint">
               <span class="upload-hint-icon">📷</span>
@@ -2247,14 +2212,6 @@
               type="file"
               accept="image/*"
               onchange="handlePhoto(this, 'slot-hall3', 'img-hall3')"
-              onclick="
-                if (!_isAdmin) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  return false;
-                }
-                event.stopPropagation();
-              "
             />
           </div>
         </div>
@@ -2314,11 +2271,7 @@
 
         <!-- 수업 사진 -->
         <div class="class-strip" style="margin-top: 40px">
-          <div
-            class="photo-slot"
-            id="slot-class1"
-            onclick="guardedUpload('slot-class1')"
-          >
+          <div class="photo-slot" id="slot-class1">
             <img id="img-class1" src="" alt="" style="display: none" />
             <div class="upload-hint">
               <span class="upload-hint-icon">🩰</span>
@@ -2328,21 +2281,9 @@
               type="file"
               accept="image/*"
               onchange="handlePhoto(this, 'slot-class1', 'img-class1')"
-              onclick="
-                if (!_isAdmin) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  return false;
-                }
-                event.stopPropagation();
-              "
             />
           </div>
-          <div
-            class="photo-slot"
-            id="slot-class2"
-            onclick="guardedUpload('slot-class2')"
-          >
+          <div class="photo-slot" id="slot-class2">
             <img id="img-class2" src="" alt="" style="display: none" />
             <div class="upload-hint">
               <span class="upload-hint-icon">🩰</span>
@@ -2352,21 +2293,9 @@
               type="file"
               accept="image/*"
               onchange="handlePhoto(this, 'slot-class2', 'img-class2')"
-              onclick="
-                if (!_isAdmin) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  return false;
-                }
-                event.stopPropagation();
-              "
             />
           </div>
-          <div
-            class="photo-slot"
-            id="slot-class3"
-            onclick="guardedUpload('slot-class3')"
-          >
+          <div class="photo-slot" id="slot-class3">
             <img id="img-class3" src="" alt="" style="display: none" />
             <div class="upload-hint">
               <span class="upload-hint-icon">🩰</span>
@@ -2376,14 +2305,6 @@
               type="file"
               accept="image/*"
               onchange="handlePhoto(this, 'slot-class3', 'img-class3')"
-              onclick="
-                if (!_isAdmin) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  return false;
-                }
-                event.stopPropagation();
-              "
             />
           </div>
         </div>
@@ -2402,12 +2323,7 @@
           <!-- 이은주 원장 -->
           <div class="teacher-card">
             <div class="teacher-photo-wrap">
-              <div
-                class="photo-slot"
-                id="slot-teacher1"
-                onclick="guardedUpload('slot-teacher1')"
-                style="height: 100%"
-              >
+              <div class="photo-slot" id="slot-teacher1" style="height: 100%">
                 <img id="img-teacher1" src="" alt="" style="display: none" />
                 <div class="upload-hint">
                   <span class="upload-hint-icon">👤</span
@@ -2417,14 +2333,6 @@
                   type="file"
                   accept="image/*"
                   onchange="handlePhoto(this, 'slot-teacher1', 'img-teacher1')"
-                  onclick="
-                    if (!_isAdmin) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                      return false;
-                    }
-                    event.stopPropagation();
-                  "
                 />
               </div>
             </div>
@@ -2447,12 +2355,7 @@
           <!-- 국찬우 강사 -->
           <div class="teacher-card">
             <div class="teacher-photo-wrap">
-              <div
-                class="photo-slot"
-                id="slot-teacher2"
-                onclick="guardedUpload('slot-teacher2')"
-                style="height: 100%"
-              >
+              <div class="photo-slot" id="slot-teacher2" style="height: 100%">
                 <img id="img-teacher2" src="" alt="" style="display: none" />
                 <div class="upload-hint">
                   <span class="upload-hint-icon">👤</span
@@ -2462,14 +2365,6 @@
                   type="file"
                   accept="image/*"
                   onchange="handlePhoto(this, 'slot-teacher2', 'img-teacher2')"
-                  onclick="
-                    if (!_isAdmin) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                      return false;
-                    }
-                    event.stopPropagation();
-                  "
                 />
               </div>
             </div>
@@ -2492,12 +2387,7 @@
           <!-- 김민영 강사 -->
           <div class="teacher-card">
             <div class="teacher-photo-wrap">
-              <div
-                class="photo-slot"
-                id="slot-teacher3"
-                onclick="guardedUpload('slot-teacher3')"
-                style="height: 100%"
-              >
+              <div class="photo-slot" id="slot-teacher3" style="height: 100%">
                 <img id="img-teacher3" src="" alt="" style="display: none" />
                 <div class="upload-hint">
                   <span class="upload-hint-icon">👤</span
@@ -2507,14 +2397,6 @@
                   type="file"
                   accept="image/*"
                   onchange="handlePhoto(this, 'slot-teacher3', 'img-teacher3')"
-                  onclick="
-                    if (!_isAdmin) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                      return false;
-                    }
-                    event.stopPropagation();
-                  "
                 />
               </div>
             </div>
@@ -2537,12 +2419,7 @@
           <!-- 이예진 강사 -->
           <div class="teacher-card">
             <div class="teacher-photo-wrap">
-              <div
-                class="photo-slot"
-                id="slot-teacher4"
-                onclick="guardedUpload('slot-teacher4')"
-                style="height: 100%"
-              >
+              <div class="photo-slot" id="slot-teacher4" style="height: 100%">
                 <img id="img-teacher4" src="" alt="" style="display: none" />
                 <div class="upload-hint">
                   <span class="upload-hint-icon">👤</span
@@ -2552,14 +2429,6 @@
                   type="file"
                   accept="image/*"
                   onchange="handlePhoto(this, 'slot-teacher4', 'img-teacher4')"
-                  onclick="
-                    if (!_isAdmin) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                      return false;
-                    }
-                    event.stopPropagation();
-                  "
                 />
               </div>
             </div>
@@ -3077,6 +2946,13 @@
                 >인스타그램</a
               >
             </li>
+            <li>
+              <a
+                href="https://blog.naver.com/royal_ballet_house"
+                target="_blank"
+                >네이버 블로그</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -3109,7 +2985,19 @@
         <div class="ap-hd-ttl">
           Royal Ballet House — <span>관리자 패널</span>
         </div>
-        <button class="ap-hd-close" id="close-ap">← 홈으로 돌아가기</button>
+        <div style="display: flex; gap: 12px; align-items: center">
+          <button
+            class="ap-hd-close"
+            id="logout-btn"
+            style="
+              border-color: rgba(255, 255, 255, 0.1);
+              color: rgba(255, 255, 255, 0.4);
+            "
+          >
+            로그아웃
+          </button>
+          <button class="ap-hd-close" id="close-ap">← 홈으로 돌아가기</button>
+        </div>
       </div>
       <div class="ap-body">
         <div class="ap-wk">
@@ -3636,7 +3524,7 @@
           // 관리자 로그인 후 업로드 힌트 표시
           document
             .querySelectorAll(".photo-slot")
-            .forEach((el) => (el.style.cursor = "pointer"));
+            .forEach((el) => el.classList.add("admin-active"));
         } else {
           document.getElementById("login-err").style.display = "block";
         }
@@ -3644,8 +3532,16 @@
       document.getElementById("pw").addEventListener("keydown", (e) => {
         if (e.key === "Enter") document.getElementById("login-btn").click();
       });
-      document.getElementById("close-ap").onclick = () => {
+      document.getElementById("logout-btn").onclick = () => {
         _isAdmin = false;
+        document
+          .querySelectorAll(".photo-slot")
+          .forEach((el) => el.classList.remove("admin-active"));
+        document.getElementById("ap").classList.remove("open");
+        renderPub();
+      };
+      document.getElementById("close-ap").onclick = () => {
+        // _isAdmin 유지 — 패널 닫아도 로그인 상태 유지, 사진 업로드 가능
         document.getElementById("ap").classList.remove("open");
         renderPub();
       };
@@ -3685,12 +3581,6 @@
 
       /* ── PHOTO UPLOAD (Supabase Storage) ── */
       let _isAdmin = false; // 관리자 로그인 여부
-
-      // 관리자일 때만 업로드 허용
-      function guardedUpload(slotId) {
-        if (!_isAdmin) return; // 비관리자는 클릭 무시
-        document.querySelector("#" + slotId + " input[type=file]").click();
-      }
 
       async function handlePhoto(input, slotId, imgId) {
         if (!_isAdmin) return;
