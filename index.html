@@ -786,6 +786,59 @@ body {
 }
 .day-btn:has(input:checked) span { color: var(--white); }
 
+
+/* ─── PHOTO MANAGEMENT ─── */
+.photo-mgmt-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-bottom: 32px;
+}
+.photo-mgmt-card {
+  background: var(--white); border: 1px solid var(--border);
+  overflow: hidden;
+}
+.photo-mgmt-thumb {
+  width: 100%; aspect-ratio: 4/3; overflow: hidden; position: relative;
+  background: linear-gradient(145deg, #f5e0e2, #eedde0);
+  display: flex; align-items: center; justify-content: center;
+}
+.photo-mgmt-thumb img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.photo-mgmt-thumb .no-photo {
+  font-size: 0.72rem; color: var(--gray); text-align: center; padding: 8px;
+  letter-spacing: 0.08em;
+}
+.photo-mgmt-info {
+  padding: 10px 12px;
+}
+.photo-mgmt-label {
+  font-size: 0.72rem; color: var(--ink); margin-bottom: 8px;
+  font-weight: 500; letter-spacing: 0.05em;
+}
+.photo-mgmt-btns {
+  display: flex; gap: 6px;
+}
+.btn-photo-replace {
+  flex: 1; padding: 7px 0; background: var(--deep); color: var(--white);
+  border: none; cursor: pointer; font-size: 0.65rem; letter-spacing: 0.1em;
+  font-family: 'Noto Sans KR', sans-serif; position: relative;
+  touch-action: manipulation;
+}
+.btn-photo-replace input[type=file] {
+  position: absolute; inset: 0; opacity: 0; cursor: pointer;
+  width: 100%; height: 100%; pointer-events: none;
+}
+.btn-photo-replace.admin-active input[type=file] { pointer-events: all; }
+.btn-photo-delete {
+  padding: 7px 10px; background: none; color: var(--deep);
+  border: 1px solid var(--border); cursor: pointer; font-size: 0.65rem;
+  font-family: 'Noto Sans KR', sans-serif; touch-action: manipulation;
+}
+.btn-photo-delete:hover { background: var(--deep); color: var(--white); border-color: var(--deep); }
+@media (max-width: 600px) {
+  .photo-mgmt-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+}
+
 /* ── TOUCH / MOBILE POLISH ── */
 * { -webkit-tap-highlight-color: transparent; }
 button, a { touch-action: manipulation; }
@@ -1390,6 +1443,267 @@ button, a { touch-action: manipulation; }
       <div class="add-ok" id="add-fixed-ok">✓ 고정 수업이 추가되었습니다.</div>
     </div>
 
+    <!-- 사진 관리 -->
+    <div class="ap-sec-ttl" style="margin-top:48px;">사진 관리</div>
+    <div class="photo-mgmt-grid">
+      <div class="photo-mgmt-card" id="mgmt-about">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-about" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-about">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">학원 소개 사진</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('about')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'about')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('about')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-hall1">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-hall1" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-hall1">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">화이트홀 사진 1</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('hall1')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall1')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('hall1')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-hall2">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-hall2" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-hall2">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">화이트홀 사진 2</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('hall2')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall2')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('hall2')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-hall3">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-hall3" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-hall3">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">화이트홀 사진 3</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('hall3')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall3')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('hall3')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-space1">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-space1" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-space1">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">학원 공간 사진 1</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('space1')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space1')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('space1')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-space2">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-space2" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-space2">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">학원 공간 사진 2</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('space2')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space2')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('space2')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-space3">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-space3" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-space3">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">학원 공간 사진 3</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('space3')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space3')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('space3')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-class1">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-class1" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-class1">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">수업 사진 1</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('class1')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class1')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('class1')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-class2">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-class2" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-class2">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">수업 사진 2</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('class2')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class2')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('class2')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-class3">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-class3" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-class3">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">수업 사진 3</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('class3')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class3')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('class3')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher1">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher1" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher1">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 1 (이은주)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher1')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher1')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher1')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher2">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher2" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher2">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 2 (국찬우)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher2')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher2')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher2')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher3">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher3" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher3">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 3 (김민영)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher3')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher3')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher3')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher4">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher4" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher4">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 4 (이예진)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher4')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher4')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher4')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher5">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher5" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher5">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 5 (정세환)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher5')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher5')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher5')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher6">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher6" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher6">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 6 (강나후)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher6')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher6')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher6')">삭제</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="add-box">
       <div class="add-ttl">새 예약 추가</div>
       <div class="add-grid">
@@ -1837,6 +2151,80 @@ document.getElementById('add-fixed-btn').onclick = async () => {
   msg.style.display = 'block'; setTimeout(() => msg.style.display = 'none', 2800);
   renderFixed(); renderPub();
 };
+
+
+/* ── PHOTO MANAGEMENT (관리자 패널) ── */
+async function mgmtLoadPhotos() {
+  const slots = ['about','hall1','hall2','hall3','space1','space2','space3',
+                 'class1','class2','class3',
+                 'teacher1','teacher2','teacher3','teacher4','teacher5','teacher6'];
+  for (const s of slots) {
+    for (const ext of ['jpg','jpeg','png','webp']) {
+      const path = `site/slot-${s}.${ext}`;
+      const { data } = _supabase.storage.from('photos').getPublicUrl(path);
+      try {
+        const res = await fetch(data.publicUrl, { method: 'HEAD' });
+        if (res.ok) {
+          const img = document.getElementById('mgmt-img-' + s);
+          const no  = document.getElementById('mgmt-no-' + s);
+          if (img) { img.src = data.publicUrl + '?t=' + Date.now(); img.style.display = 'block'; }
+          if (no)  { no.style.display = 'none'; }
+          break;
+        }
+      } catch(_) {}
+    }
+    // 교체 버튼 admin-active 추가
+    const btn = document.querySelector(`#mgmt-${s} .btn-photo-replace`);
+    if (btn) btn.classList.add('admin-active');
+  }
+}
+
+function mgmtReplace(slotId) {
+  const input = document.querySelector(`#mgmt-${slotId} .btn-photo-replace input[type=file]`);
+  if (input) input.click();
+}
+
+async function mgmtHandleReplace(input, slotId) {
+  const file = input.files[0];
+  if (!file) return;
+  const ext = file.name.split('.').pop();
+  const path = `site/slot-${slotId}.${ext}`;
+  const { error } = await _supabase.storage.from('photos').upload(path, file, { upsert: true, contentType: file.type });
+  if (error) { alert('업로드 실패: ' + error.message); return; }
+  const { data } = _supabase.storage.from('photos').getPublicUrl(path);
+  const url = data.publicUrl + '?t=' + Date.now();
+  // 관리자 패널 미리보기 갱신
+  const img = document.getElementById('mgmt-img-' + slotId);
+  const no  = document.getElementById('mgmt-no-' + slotId);
+  if (img) { img.src = url; img.style.display = 'block'; }
+  if (no)  { no.style.display = 'none'; }
+  // 홈페이지 슬롯도 갱신
+  showPhoto('slot-' + slotId, 'img-' + slotId, url);
+  alert('✓ 사진이 교체됐습니다.');
+}
+
+async function mgmtDelete(slotId) {
+  if (!confirm('이 사진을 삭제할까요?')) return;
+  // 모든 확장자 시도해서 삭제
+  const exts = ['jpg','jpeg','png','webp'];
+  let deleted = false;
+  for (const ext of exts) {
+    const path = `site/slot-${slotId}.${ext}`;
+    const { error } = await _supabase.storage.from('photos').remove([path]);
+    if (!error) deleted = true;
+  }
+  // 관리자 패널 미리보기 초기화
+  const img = document.getElementById('mgmt-img-' + slotId);
+  const no  = document.getElementById('mgmt-no-' + slotId);
+  if (img) { img.src = ''; img.style.display = 'none'; }
+  if (no)  { no.style.display = 'block'; }
+  // 홈페이지 슬롯도 초기화
+  const mainImg = document.getElementById('img-' + slotId);
+  const mainSlot = document.getElementById('slot-' + slotId);
+  if (mainImg) { mainImg.src = ''; mainImg.style.display = 'none'; }
+  if (mainSlot) mainSlot.classList.remove('has-photo');
+  alert('✓ 사진이 삭제됐습니다.');
+}
 
 /* ── INIT ── */
 renderPub();
