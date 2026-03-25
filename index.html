@@ -6,10 +6,15 @@
 <title>Royal Ballet House</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- 한글 폰트 preload (모바일 최적화) -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap"></noscript>
+<!-- 영문 폰트 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
-  /* 폰트 로드 전 fallback */
-  :root { font-display: swap; }
+  /* 폰트 fallback 체인 */
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
 </style>
 
 <style>
@@ -1171,8 +1176,8 @@ button, a { touch-action: manipulation; }
         <thead><tr><th>요일</th><th>시간</th><th>클래스</th><th>강사</th></tr></thead>
         <tbody>
           <tr class="day-badge-row"><td colspan="4">Morning Programme — 월 / 수 / 금</td></tr>
-          <tr><td>월·수·금</td><td>10:00–11:20</td><td><span class="level-tag lv-adult">Intermediate Foundation</span></td><td class="teacher-tag">국찬우</td></tr>
-          <tr><td>월·수·금</td><td>11:30–13:00</td><td><span class="level-tag lv-adult">Advanced Foundation</span></td><td class="teacher-tag">국찬우</td></tr>
+          <tr><td>월·수·금</td><td>10:00–11:20</td><td><span class="level-tag lv-adult">Intermediate</span></td><td class="teacher-tag">국찬우</td></tr>
+          <tr><td>월·수·금</td><td>11:30–13:00</td><td><span class="level-tag lv-adult">Advanced</span></td><td class="teacher-tag">국찬우</td></tr>
           <tr class="day-badge-row"><td colspan="4">Morning Programme — 화 / 목</td></tr>
           <tr><td>화·목</td><td>11:00–12:20</td><td><span class="level-tag lv-adult">Elementary</span></td><td class="teacher-tag">이은주</td></tr>
           <tr class="day-badge-row"><td colspan="4">Evening Programme — 월 / 수</td></tr>
