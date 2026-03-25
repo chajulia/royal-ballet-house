@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -844,12 +843,10 @@ body {
 * { -webkit-tap-highlight-color: transparent; }
 button, a { touch-action: manipulation; }
 </style>
-
 </head>
 <body>
 
 <!-- NAV -->
-
 <nav id="nav">
   <a class="nav-logo" href="#hero">
     <div class="nav-logo-mark">R</div>
@@ -872,11 +869,9 @@ button, a { touch-action: manipulation; }
 </nav>
 
 <!-- DRAWER OVERLAY -->
-
 <div id="drawer-overlay"></div>
 
 <!-- SIDE DRAWER -->
-
 <div id="drawer">
   <ul class="drawer-links">
     <li><a href="#about"    class="drawer-link">소개</a></li>
@@ -890,7 +885,6 @@ button, a { touch-action: manipulation; }
 </div>
 
 <!-- HERO -->
-
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-circle hc1"></div>
@@ -911,7 +905,6 @@ button, a { touch-action: manipulation; }
 </section>
 
 <!-- ABOUT -->
-
 <section style="background:var(--white);" id="about">
   <div class="wrap">
     <div class="about-grid">
@@ -925,26 +918,23 @@ button, a { touch-action: manipulation; }
           <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-about','img-about')">
         </div>
 
-```
-  </div>
-  <div>
-    <span class="eyebrow">About Us</span>
-    <h2 class="sec-h2">발레의 <em>아름다움</em>을<br>함께합니다</h2>
-    <div class="rule"></div>
-    <p class="body-txt">
-      Royal Ballet House는 유치부부터 성인까지, 모든 연령이 함께하는 전문 발레 학원입니다.<br><br>
-      화이트홀 스튜디오는 전문 무용 바닥재와 대형 거울, 연습용 바를 완비하고 있으며, 개인 연습 및 촬영을 위한 시간 단위 대관도 운영합니다.
-    </p>
+      </div>
+      <div>
+        <span class="eyebrow">About Us</span>
+        <h2 class="sec-h2">발레의 <em>아름다움</em>을<br>함께합니다</h2>
+        <div class="rule"></div>
+        <p class="body-txt">
+          Royal Ballet House는 유치부부터 성인까지, 모든 연령이 함께하는 전문 발레 학원입니다.<br><br>
+          화이트홀 스튜디오는 전문 무용 바닥재와 대형 거울, 연습용 바를 완비하고 있으며, 개인 연습 및 촬영을 위한 시간 단위 대관도 운영합니다.
+        </p>
 
-  </div>
-</div>
-```
-
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- GALLERY: 화이트홀 + 학원 공간 -->
 
+<!-- GALLERY: 화이트홀 + 학원 공간 -->
 <section class="gallery-section" id="gallery">
   <div class="wrap">
     <span class="eyebrow">Our Space</span>
@@ -977,42 +967,38 @@ button, a { touch-action: manipulation; }
       </div>
     </div>
 
-```
-<!-- 학원 공간 추가 사진 -->
-<h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);margin-top:60px;margin-bottom:24px;">학원 <em style="font-style:italic;color:var(--dusty);">공간</em></h3>
-<div class="space-strip">
-  <div class="photo-slot" id="slot-space1">
-    <img id="img-space1" src="" alt="" style="display:none;">
-    <div class="upload-hint">
-      <span class="upload-hint-icon">🏫</span>
-      <span class="upload-hint-txt">학원 공간 사진 1</span>
+    <!-- 학원 공간 추가 사진 -->
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);margin-top:60px;margin-bottom:24px;">학원 <em style="font-style:italic;color:var(--dusty);">공간</em></h3>
+    <div class="space-strip">
+      <div class="photo-slot" id="slot-space1">
+        <img id="img-space1" src="" alt="" style="display:none;">
+        <div class="upload-hint">
+          <span class="upload-hint-icon">🏫</span>
+          <span class="upload-hint-txt">학원 공간 사진 1</span>
+        </div>
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-space1','img-space1')">
+      </div>
+      <div class="photo-slot" id="slot-space2">
+        <img id="img-space2" src="" alt="" style="display:none;">
+        <div class="upload-hint">
+          <span class="upload-hint-icon">🏫</span>
+          <span class="upload-hint-txt">학원 공간 사진 2</span>
+        </div>
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-space2','img-space2')">
+      </div>
+      <div class="photo-slot" id="slot-space3">
+        <img id="img-space3" src="" alt="" style="display:none;">
+        <div class="upload-hint">
+          <span class="upload-hint-icon">🏫</span>
+          <span class="upload-hint-txt">학원 공간 사진 3</span>
+        </div>
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-space3','img-space3')">
+      </div>
     </div>
-    <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-space1','img-space1')">
-  </div>
-  <div class="photo-slot" id="slot-space2">
-    <img id="img-space2" src="" alt="" style="display:none;">
-    <div class="upload-hint">
-      <span class="upload-hint-icon">🏫</span>
-      <span class="upload-hint-txt">학원 공간 사진 2</span>
-    </div>
-    <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-space2','img-space2')">
-  </div>
-  <div class="photo-slot" id="slot-space3">
-    <img id="img-space3" src="" alt="" style="display:none;">
-    <div class="upload-hint">
-      <span class="upload-hint-icon">🏫</span>
-      <span class="upload-hint-txt">학원 공간 사진 3</span>
-    </div>
-    <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-space3','img-space3')">
-  </div>
-</div>
-```
-
   </div>
 </section>
 
 <!-- PROGRAMS -->
-
 <section style="background:var(--mist);" id="programs">
   <div class="wrap">
     <span class="eyebrow">Programs</span>
@@ -1045,41 +1031,37 @@ button, a { touch-action: manipulation; }
       </div>
     </div>
 
-```
-<!-- 수업 사진 -->
-<div class="class-strip" style="margin-top:40px;">
-  <div class="photo-slot" id="slot-class1">
-    <img id="img-class1" src="" alt="" style="display:none;">
-    <div class="upload-hint">
-      <span class="upload-hint-icon">🩰</span>
-      <span class="upload-hint-txt">수업 사진 1</span>
+    <!-- 수업 사진 -->
+    <div class="class-strip" style="margin-top:40px;">
+      <div class="photo-slot" id="slot-class1">
+        <img id="img-class1" src="" alt="" style="display:none;">
+        <div class="upload-hint">
+          <span class="upload-hint-icon">🩰</span>
+          <span class="upload-hint-txt">수업 사진 1</span>
+        </div>
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class1','img-class1')">
+      </div>
+      <div class="photo-slot" id="slot-class2">
+        <img id="img-class2" src="" alt="" style="display:none;">
+        <div class="upload-hint">
+          <span class="upload-hint-icon">🩰</span>
+          <span class="upload-hint-txt">수업 사진 2</span>
+        </div>
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class2','img-class2')">
+      </div>
+      <div class="photo-slot" id="slot-class3">
+        <img id="img-class3" src="" alt="" style="display:none;">
+        <div class="upload-hint">
+          <span class="upload-hint-icon">🩰</span>
+          <span class="upload-hint-txt">수업 사진 3</span>
+        </div>
+        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class3','img-class3')">
+      </div>
     </div>
-    <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class1','img-class1')">
-  </div>
-  <div class="photo-slot" id="slot-class2">
-    <img id="img-class2" src="" alt="" style="display:none;">
-    <div class="upload-hint">
-      <span class="upload-hint-icon">🩰</span>
-      <span class="upload-hint-txt">수업 사진 2</span>
-    </div>
-    <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class2','img-class2')">
-  </div>
-  <div class="photo-slot" id="slot-class3">
-    <img id="img-class3" src="" alt="" style="display:none;">
-    <div class="upload-hint">
-      <span class="upload-hint-icon">🩰</span>
-      <span class="upload-hint-txt">수업 사진 3</span>
-    </div>
-    <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-class3','img-class3')">
-  </div>
-</div>
-```
-
   </div>
 </section>
 
 <!-- TEACHERS -->
-
 <section style="background:var(--ink);" id="teachers">
   <div class="wrap">
     <span class="eyebrow">Faculty</span>
@@ -1087,265 +1069,254 @@ button, a { touch-action: manipulation; }
     <div class="rule"></div>
     <div class="teachers-grid">
 
-```
-  <!-- 이은주 원장 -->
-  <div class="teacher-card">
-    <div class="teacher-photo-wrap">
-      <div class="photo-slot" id="slot-teacher1" style="height:100%;">
-        <img id="img-teacher1" src="" alt="" style="display:none;">
-        <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher1','img-teacher1')">
+      <!-- 이은주 원장 -->
+      <div class="teacher-card">
+        <div class="teacher-photo-wrap">
+          <div class="photo-slot" id="slot-teacher1" style="height:100%;">
+            <img id="img-teacher1" src="" alt="" style="display:none;">
+            <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher1','img-teacher1')">
+          </div>
+        </div>
+        <div class="teacher-name">이은주 원장</div>
+        
+        <ul class="career-list">
+          <li>영국 Royal Academy of Dance 국제교사</li>
+          <li>프랑스 Château Danse Festival (Ballet)</li>
+          <li>스완스발레단 전 지도위원</li>
+          <li>와이즈발레단 전 주역무용수</li>
+          <li>대한 발레교육 연구협회 대표</li>
+          <li>한양대학교 발레전공 / 계원예술고 발레전공</li>
+        </ul>
+        <div class="teacher-classes">
+          <span class="tc-tag">화·목 오전반</span>
+          <span class="tc-tag">Elementary</span>
+        </div>
       </div>
-    </div>
-    <div class="teacher-name">이은주 원장</div>
-    
-    <ul class="career-list">
-      <li>영국 Royal Academy of Dance 국제교사</li>
-      <li>프랑스 Château Danse Festival (Ballet)</li>
-      <li>스완스발레단 전 지도위원</li>
-      <li>와이즈발레단 전 주역무용수</li>
-      <li>대한 발레교육 연구협회 대표</li>
-      <li>한양대학교 발레전공 / 계원예술고 발레전공</li>
-    </ul>
-    <div class="teacher-classes">
-      <span class="tc-tag">화·목 오전반</span>
-      <span class="tc-tag">Elementary</span>
-    </div>
-  </div>
 
-  <!-- 국찬우 강사 -->
-  <div class="teacher-card">
-    <div class="teacher-photo-wrap">
-      <div class="photo-slot" id="slot-teacher2" style="height:100%;">
-        <img id="img-teacher2" src="" alt="" style="display:none;">
-        <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher2','img-teacher2')">
+      <!-- 국찬우 강사 -->
+      <div class="teacher-card">
+        <div class="teacher-photo-wrap">
+          <div class="photo-slot" id="slot-teacher2" style="height:100%;">
+            <img id="img-teacher2" src="" alt="" style="display:none;">
+            <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher2','img-teacher2')">
+          </div>
+        </div>
+        <div class="teacher-name">국찬우 강사</div>
+        
+        <ul class="career-list">
+          <li>(전) 국립발레단 단원</li>
+          <li>Russia Vaganova Ballet Academy 수료</li>
+          <li>PERIDANCE Master Class 수료</li>
+          <li>2019 서울국제콩쿨 2위</li>
+          <li>2017 서울발레협회콩쿨 대상</li>
+          <li>국민대 공연예술학부 발레전공</li>
+        </ul>
+        <div class="teacher-classes">
+          <span class="tc-tag">월·수·금 오전</span>
+          <span class="tc-tag">Intermediate / Advanced</span>
+        </div>
       </div>
-    </div>
-    <div class="teacher-name">국찬우 강사</div>
-    
-    <ul class="career-list">
-      <li>(전) 국립발레단 단원</li>
-      <li>Russia Vaganova Ballet Academy 수료</li>
-      <li>PERIDANCE Master Class 수료</li>
-      <li>2019 서울국제콩쿨 2위</li>
-      <li>2017 서울발레협회콩쿨 대상</li>
-      <li>국민대 공연예술학부 발레전공</li>
-    </ul>
-    <div class="teacher-classes">
-      <span class="tc-tag">월·수·금 오전</span>
-      <span class="tc-tag">Intermediate / Advanced</span>
-    </div>
-  </div>
 
-  <!-- 김민영 강사 -->
-  <div class="teacher-card">
-    <div class="teacher-photo-wrap">
-      <div class="photo-slot" id="slot-teacher3" style="height:100%;">
-        <img id="img-teacher3" src="" alt="" style="display:none;">
-        <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher3','img-teacher3')">
+      <!-- 김민영 강사 -->
+      <div class="teacher-card">
+        <div class="teacher-photo-wrap">
+          <div class="photo-slot" id="slot-teacher3" style="height:100%;">
+            <img id="img-teacher3" src="" alt="" style="display:none;">
+            <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher3','img-teacher3')">
+          </div>
+        </div>
+        <div class="teacher-name">김민영 강사</div>
+        
+        <ul class="career-list">
+          <li>와이즈발레단 수석무용수 (현역)</li>
+          <li>신인발레리나상 — 한국발레협회</li>
+          <li>최우수무용가상 — 와이즈발레단</li>
+          <li>예원 예술중학교 졸업</li>
+          <li>서울예술고등학교 졸업</li>
+          <li>이화여자대학교 발레전공 졸업</li>
+        </ul>
+        <div class="teacher-classes">
+          <span class="tc-tag">월·수 저녁</span>
+          <span class="tc-tag">Intermediate / Pointe</span>
+        </div>
       </div>
-    </div>
-    <div class="teacher-name">김민영 강사</div>
-    
-    <ul class="career-list">
-      <li>와이즈발레단 수석무용수 (현역)</li>
-      <li>신인발레리나상 — 한국발레협회</li>
-      <li>최우수무용가상 — 와이즈발레단</li>
-      <li>예원 예술중학교 졸업</li>
-      <li>서울예술고등학교 졸업</li>
-      <li>이화여자대학교 발레전공 졸업</li>
-    </ul>
-    <div class="teacher-classes">
-      <span class="tc-tag">월·수 저녁</span>
-      <span class="tc-tag">Intermediate / Pointe</span>
-    </div>
-  </div>
 
-  <!-- 이예진 강사 -->
-  <div class="teacher-card">
-    <div class="teacher-photo-wrap">
-      <div class="photo-slot" id="slot-teacher4" style="height:100%;">
-        <img id="img-teacher4" src="" alt="" style="display:none;">
-        <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher4','img-teacher4')">
+      <!-- 이예진 강사 -->
+      <div class="teacher-card">
+        <div class="teacher-photo-wrap">
+          <div class="photo-slot" id="slot-teacher4" style="height:100%;">
+            <img id="img-teacher4" src="" alt="" style="display:none;">
+            <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher4','img-teacher4')">
+          </div>
+        </div>
+        <div class="teacher-name">이예진 강사</div>
+        
+        <ul class="career-list">
+          <li>선화예술고등학교 발레전공 졸업</li>
+          <li>숙명여자대학교 실기우수 입학 발레전공</li>
+          <li>VoLa Dance Company in Germany 무용수</li>
+          <li>독일 내 다수 공연 경력</li>
+          <li>선화예술고등학교 입시 합격 지도 경력</li>
+        </ul>
+        <div class="teacher-classes">
+          <span class="tc-tag">영재반 월·수·금</span>
+          <span class="tc-tag">유치부 월수</span>
+        </div>
       </div>
-    </div>
-    <div class="teacher-name">이예진 강사</div>
-    
-    <ul class="career-list">
-      <li>선화예술고등학교 발레전공 졸업</li>
-      <li>숙명여자대학교 실기우수 입학 발레전공</li>
-      <li>VoLa Dance Company in Germany 무용수</li>
-      <li>독일 내 다수 공연 경력</li>
-      <li>선화예술고등학교 입시 합격 지도 경력</li>
-    </ul>
-    <div class="teacher-classes">
-      <span class="tc-tag">영재반 월·수·금</span>
-      <span class="tc-tag">유치부 월수</span>
-    </div>
-  </div>
 
 
-  <!-- 정세환 강사 -->
-  <div class="teacher-card">
-    <div class="teacher-photo-wrap">
-      <div class="photo-slot" id="slot-teacher5" style="height:100%;">
-        <img id="img-teacher5" src="" alt="" style="display:none;">
-        <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher5','img-teacher5')">
+      <!-- 정세환 강사 -->
+      <div class="teacher-card">
+        <div class="teacher-photo-wrap">
+          <div class="photo-slot" id="slot-teacher5" style="height:100%;">
+            <img id="img-teacher5" src="" alt="" style="display:none;">
+            <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher5','img-teacher5')">
+          </div>
+        </div>
+        <div class="teacher-name">정세환 강사</div>
+        <ul class="career-list">
+          <li>상세 경력 추가 예정</li>
+        </ul>
+        <div class="teacher-classes">
+          <span class="tc-tag">화·목 저녁</span>
+        </div>
       </div>
-    </div>
-    <div class="teacher-name">정세환 강사</div>
-    <ul class="career-list">
-      <li>상세 경력 추가 예정</li>
-    </ul>
-    <div class="teacher-classes">
-      <span class="tc-tag">화·목 저녁</span>
-    </div>
-  </div>
 
-  <!-- 강나후 강사 -->
-  <div class="teacher-card">
-    <div class="teacher-photo-wrap">
-      <div class="photo-slot" id="slot-teacher6" style="height:100%;">
-        <img id="img-teacher6" src="" alt="" style="display:none;">
-        <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
-        <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher6','img-teacher6')">
+      <!-- 강나후 강사 -->
+      <div class="teacher-card">
+        <div class="teacher-photo-wrap">
+          <div class="photo-slot" id="slot-teacher6" style="height:100%;">
+            <img id="img-teacher6" src="" alt="" style="display:none;">
+            <div class="upload-hint"><span class="upload-hint-icon">👤</span><span class="upload-hint-txt">강사 사진</span></div>
+            <input type="file" accept="image/*" onchange="handlePhoto(this,'slot-teacher6','img-teacher6')">
+          </div>
+        </div>
+        <div class="teacher-name">강나후 강사</div>
+        <ul class="career-list">
+          <li>상세 경력 추가 예정</li>
+        </ul>
+        <div class="teacher-classes">
+          <span class="tc-tag">화·목 저녁</span>
+        </div>
       </div>
-    </div>
-    <div class="teacher-name">강나후 강사</div>
-    <ul class="career-list">
-      <li>상세 경력 추가 예정</li>
-    </ul>
-    <div class="teacher-classes">
-      <span class="tc-tag">화·목 저녁</span>
-    </div>
-  </div>
 
-</div>
-```
-
+    </div>
   </div>
 </section>
 
 <!-- CLASS TIMETABLE -->
-
 <section class="class-tt-section" id="class-schedule">
   <div class="wrap">
     <span class="eyebrow">Class Schedule</span>
     <h2 class="sec-h2">수업 <em>시간표</em></h2>
     <div class="rule"></div>
 
-```
-<!-- tabs -->
-<div class="tt-tabs">
-  <button class="tt-tab active" onclick="switchTab('adult')">성인반</button>
-  <button class="tt-tab" onclick="switchTab('student')">학생반</button>
-  <button class="tt-tab" onclick="switchTab('junior')">유치·초등 기초반</button>
-</div>
+    <!-- tabs -->
+    <div class="tt-tabs">
+      <button class="tt-tab active" onclick="switchTab('adult')">성인반</button>
+      <button class="tt-tab" onclick="switchTab('student')">학생반</button>
+      <button class="tt-tab" onclick="switchTab('junior')">유치·초등 기초반</button>
+    </div>
 
-<!-- 성인반 -->
-<div class="tt-pane active" id="pane-adult">
-  <table class="class-table">
-    <thead><tr><th>요일</th><th>시간</th><th>클래스</th><th>강사</th></tr></thead>
-    <tbody>
-      <tr class="day-badge-row"><td colspan="4">Morning Programme — 월 / 수 / 금</td></tr>
-      <tr><td>월·수·금</td><td>10:00–11:20</td><td><span class="level-tag lv-adult">Intermediate</span></td><td class="teacher-tag">국찬우</td></tr>
-      <tr><td>월·수·금</td><td>11:30–13:00</td><td><span class="level-tag lv-adult">Advanced</span></td><td class="teacher-tag">국찬우</td></tr>
-      <tr class="day-badge-row"><td colspan="4">Morning Programme — 화 / 목</td></tr>
-      <tr><td>화·목</td><td>11:00–12:20</td><td><span class="level-tag lv-adult">Elementary</span></td><td class="teacher-tag">이은주</td></tr>
-      <tr class="day-badge-row"><td colspan="4">Evening Programme — 월 / 수</td></tr>
-      <tr><td>월·수</td><td>19:30–21:00</td><td><span class="level-tag lv-adult">Intermediate</span></td><td class="teacher-tag">김민영</td></tr>
-      <tr><td>수 only</td><td>21:10–22:00</td><td><span class="level-tag lv-special">Pointe Work</span></td><td class="teacher-tag">김민영</td></tr>
-      <tr class="day-badge-row"><td colspan="4">Evening Programme — 화 / 목</td></tr>
-      <tr><td>화·목</td><td>19:30–20:30</td><td><span class="level-tag lv-adult">Beginner 1</span></td><td class="teacher-tag">정세환</td></tr>
-      <tr><td>화·목</td><td>20:40–21:40</td><td><span class="level-tag lv-adult">Beginner 2</span></td><td class="teacher-tag">정세환</td></tr>
-      <tr><td>화·목</td><td>20:00–21:20</td><td><span class="level-tag lv-adult">Elementary</span></td><td class="teacher-tag">강나후</td></tr>
-      <tr class="day-badge-row"><td colspan="4">월수 저녁 — Intensive</td></tr>
-      <tr><td>월·수</td><td>17:30–19:00</td><td><span class="level-tag lv-special">Intensive 전공반</span></td><td class="teacher-tag">김민영</td></tr>
-    </tbody>
-  </table>
-</div>
+    <!-- 성인반 -->
+    <div class="tt-pane active" id="pane-adult">
+      <table class="class-table">
+        <thead><tr><th>요일</th><th>시간</th><th>클래스</th><th>강사</th></tr></thead>
+        <tbody>
+          <tr class="day-badge-row"><td colspan="4">Morning Programme — 월 / 수 / 금</td></tr>
+          <tr><td>월·수·금</td><td>10:00–11:20</td><td><span class="level-tag lv-adult">Intermediate</span></td><td class="teacher-tag">국찬우</td></tr>
+          <tr><td>월·수·금</td><td>11:30–13:00</td><td><span class="level-tag lv-adult">Advanced</span></td><td class="teacher-tag">국찬우</td></tr>
+          <tr class="day-badge-row"><td colspan="4">Morning Programme — 화 / 목</td></tr>
+          <tr><td>화·목</td><td>11:00–12:20</td><td><span class="level-tag lv-adult">Elementary</span></td><td class="teacher-tag">이은주</td></tr>
+          <tr class="day-badge-row"><td colspan="4">Evening Programme — 월 / 수</td></tr>
+          <tr><td>월·수</td><td>19:30–21:00</td><td><span class="level-tag lv-adult">Intermediate</span></td><td class="teacher-tag">김민영</td></tr>
+          <tr><td>수 only</td><td>21:10–22:00</td><td><span class="level-tag lv-special">Pointe Work</span></td><td class="teacher-tag">김민영</td></tr>
+          <tr class="day-badge-row"><td colspan="4">Evening Programme — 화 / 목</td></tr>
+          <tr><td>화·목</td><td>19:30–20:30</td><td><span class="level-tag lv-adult">Beginner 1</span></td><td class="teacher-tag">정세환</td></tr>
+          <tr><td>화·목</td><td>20:40–21:40</td><td><span class="level-tag lv-adult">Beginner 2</span></td><td class="teacher-tag">정세환</td></tr>
+          <tr><td>화·목</td><td>20:00–21:20</td><td><span class="level-tag lv-adult">Elementary</span></td><td class="teacher-tag">강나후</td></tr>
+          <tr class="day-badge-row"><td colspan="4">월수 저녁 — Intensive</td></tr>
+          <tr><td>월·수</td><td>17:30–19:00</td><td><span class="level-tag lv-special">Intensive 전공반</span></td><td class="teacher-tag">김민영</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-<!-- 어린이·학생반 -->
-<div class="tt-pane" id="pane-student">
-  <table class="class-table">
-    <thead><tr><th>요일</th><th>시간</th><th>클래스</th></tr></thead>
-    <tbody>
-      <tr class="day-badge-row"><td colspan="3">월 / 수 / 금</td></tr>
-      <tr><td>월·수·금</td><td>15:20–16:20</td><td><span class="level-tag lv-youth">영재반 (Gifted Class)</span></td></tr>
-      <tr><td>월·수·금</td><td>16:30–17:30</td><td><span class="level-tag lv-child">Elite Class 엘리트반</span></td></tr>
-      <tr><td>월·수·금</td><td>17:30–19:30</td><td><span class="level-tag lv-special">Intensive 전공반</span></td></tr>
-      <tr class="day-badge-row"><td colspan="3">화 / 목</td></tr>
-      <tr><td>화·목</td><td>15:30–16:20</td><td><span class="level-tag lv-child">Primary 초등기초 (8-10y)</span></td></tr>
-      <tr><td>화·목</td><td>16:30–17:20</td><td><span class="level-tag lv-child">Pre-Elementary (7-8y)</span></td></tr>
-      <tr><td>화·목</td><td>17:30–19:30</td><td><span class="level-tag lv-special">Intensive 전공반</span></td></tr>
-      <tr><td>화·목</td><td>19:30–17:30</td><td><span class="level-tag lv-special">Vaganova 2 바가노바</span></td></tr>
-      <tr><td>화·목</td><td>19:00–19:50</td><td><span class="level-tag lv-special">Pointe Work Class</span></td></tr>
-    </tbody>
-  </table>
-</div>
+    <!-- 어린이·학생반 -->
+    <div class="tt-pane" id="pane-student">
+      <table class="class-table">
+        <thead><tr><th>요일</th><th>시간</th><th>클래스</th></tr></thead>
+        <tbody>
+          <tr class="day-badge-row"><td colspan="3">월 / 수 / 금</td></tr>
+          <tr><td>월·수·금</td><td>15:20–16:20</td><td><span class="level-tag lv-youth">영재반 (Gifted Class)</span></td></tr>
+          <tr><td>월·수·금</td><td>16:30–17:30</td><td><span class="level-tag lv-child">Elite Class 엘리트반</span></td></tr>
+          <tr><td>월·수·금</td><td>17:30–19:30</td><td><span class="level-tag lv-special">Intensive 전공반</span></td></tr>
+          <tr class="day-badge-row"><td colspan="3">화 / 목</td></tr>
+          <tr><td>화·목</td><td>15:30–16:20</td><td><span class="level-tag lv-child">Primary 초등기초 (8-10y)</span></td></tr>
+          <tr><td>화·목</td><td>16:30–17:20</td><td><span class="level-tag lv-child">Pre-Elementary (7-8y)</span></td></tr>
+          <tr><td>화·목</td><td>17:30–19:30</td><td><span class="level-tag lv-special">Intensive 전공반</span></td></tr>
+          <tr><td>화·목</td><td>19:30–17:30</td><td><span class="level-tag lv-special">Vaganova 2 바가노바</span></td></tr>
+          <tr><td>화·목</td><td>19:00–19:50</td><td><span class="level-tag lv-special">Pointe Work Class</span></td></tr>
+        </tbody>
+      </table>
+    </div>
 
-<!-- 유치·초등 기초반 -->
-<div class="tt-pane" id="pane-junior">
-  <table class="class-table">
-    <thead><tr><th>요일</th><th>시간</th><th>클래스</th></tr></thead>
-    <tbody>
-      <tr class="day-badge-row"><td colspan="3">월 / 수</td></tr>
-      <tr><td>월·수</td><td>15:30–16:20</td><td><span class="level-tag lv-child">Primary 초등기초</span></td></tr>
-      <tr><td>월·수</td><td>16:30–17:20</td><td><span class="level-tag lv-child">유치부 Lv.1 (6세)</span></td></tr>
-      <tr class="day-badge-row"><td colspan="3">화 / 목</td></tr>
-      <tr><td>화·목</td><td>15:30–16:20</td><td><span class="level-tag lv-child">Primary 초등기초 (8-10y)</span></td></tr>
-      <tr><td>화·목</td><td>16:30–17:20</td><td><span class="level-tag lv-child">예비초등부 (7-8y)</span></td></tr>
-    </tbody>
-  </table>
-</div>
-```
+    <!-- 유치·초등 기초반 -->
+    <div class="tt-pane" id="pane-junior">
+      <table class="class-table">
+        <thead><tr><th>요일</th><th>시간</th><th>클래스</th></tr></thead>
+        <tbody>
+          <tr class="day-badge-row"><td colspan="3">월 / 수</td></tr>
+          <tr><td>월·수</td><td>15:30–16:20</td><td><span class="level-tag lv-child">Primary 초등기초</span></td></tr>
+          <tr><td>월·수</td><td>16:30–17:20</td><td><span class="level-tag lv-child">유치부 Lv.1 (6세)</span></td></tr>
+          <tr class="day-badge-row"><td colspan="3">화 / 목</td></tr>
+          <tr><td>화·목</td><td>15:30–16:20</td><td><span class="level-tag lv-child">Primary 초등기초 (8-10y)</span></td></tr>
+          <tr><td>화·목</td><td>16:30–17:20</td><td><span class="level-tag lv-child">예비초등부 (7-8y)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
 
   </div>
 </section>
 
 <!-- SCHEDULE (PUBLIC) -->
-
 <section style="background:var(--white);" id="schedule">
   <div class="wrap">
     <span class="eyebrow">Hall Rental</span>
     <h2 class="sec-h2">화이트홀 <em>대관 시간표</em></h2>
     <div class="rule"></div>
 
-```
-<div style="display:inline-flex;align-items:center;gap:12px;background:var(--blush);border-left:3px solid var(--rose);padding:14px 22px;margin-bottom:32px;border-radius:0 4px 4px 0;">
-  <span style="font-size:1.1rem;">💛</span>
-  <span style="font-size:0.82rem;color:var(--deep);line-height:1.6;">화이트홀 대관 문의는 <a href="https://pf.kakao.com/_xloyal" target="_blank" style="color:var(--deep);font-weight:500;text-decoration:underline;text-underline-offset:3px;">카카오톡</a>으로 연락 주세요.</span>
-</div>
+    <div style="display:inline-flex;align-items:center;gap:12px;background:var(--blush);border-left:3px solid var(--rose);padding:14px 22px;margin-bottom:32px;border-radius:0 4px 4px 0;">
+      <span style="font-size:1.1rem;">💛</span>
+      <span style="font-size:0.82rem;color:var(--deep);line-height:1.6;">화이트홀 대관 문의는 <a href="https://pf.kakao.com/_xloyal" target="_blank" style="color:var(--deep);font-weight:500;text-decoration:underline;text-underline-offset:3px;">카카오톡</a>으로 연락 주세요.</span>
+    </div>
 
-<div class="sched-controls">
-  <div class="wk-nav">
-    <button class="wk-btn" id="pub-prev">‹</button>
-    <span class="wk-lbl" id="pub-lbl"></span>
-    <button class="wk-btn" id="pub-next">›</button>
-  </div>
-  <div class="legend">
-    <div class="leg"><div class="leg-d" style="background:linear-gradient(135deg,var(--rose),var(--dusty));"></div>예약됨</div>
-    <div class="leg"><div class="leg-d" style="background:#eef7f0;border:1px solid #b8ddc0;"></div>예약 가능</div>
-  </div>
-</div>
+    <div class="sched-controls">
+      <div class="wk-nav">
+        <button class="wk-btn" id="pub-prev">‹</button>
+        <span class="wk-lbl" id="pub-lbl"></span>
+        <button class="wk-btn" id="pub-next">›</button>
+      </div>
+      <div class="legend">
+        <div class="leg"><div class="leg-d" style="background:linear-gradient(135deg,var(--rose),var(--dusty));"></div>예약됨</div>
+        <div class="leg"><div class="leg-d" style="background:#eef7f0;border:1px solid #b8ddc0;"></div>예약 가능</div>
+      </div>
+    </div>
 
-<div class="tt-wrap">
-  <table class="tt">
-    <thead><tr id="pub-head"><th class="tt-th0">시간</th></tr></thead>
-    <tbody id="pub-body"></tbody>
-  </table>
-</div>
-```
-
+    <div class="tt-wrap">
+      <table class="tt">
+        <thead><tr id="pub-head"><th class="tt-th0">시간</th></tr></thead>
+        <tbody id="pub-body"></tbody>
+      </table>
+    </div>
   </div>
 </section>
 
 <!-- LOCATION -->
-
 <section style="background:var(--mist);" id="location">
   <div class="wrap">
     <div>
@@ -1376,35 +1347,31 @@ button, a { touch-action: manipulation; }
 </section>
 
 <!-- FOOTER -->
-
 <footer id="footer">
   <div class="ft-inner">
     <div>
       <div class="ft-brand-name">♛ Royal Ballet House</div>
 
-```
-</div>
-<div class="ft-col">
-  <div class="ft-col-ttl">Quick Links</div>
-  <ul>
-    <li><a href="#about">학원 소개</a></li>
-    <li><a href="#programs">수업 안내</a></li>
-    <li><a href="#teachers">강사 소개</a></li>
-    <li><a href="#schedule">화이트홀 대관</a></li>
-    <li><a href="#location">오시는 길</a></li>
-  </ul>
-</div>
-<div class="ft-col">
-  <div class="ft-col-ttl">Contact</div>
-  <ul>
-    <li><a href="tel:01097820903">010-9782-0903</a></li>
-    <li><a href="https://pf.kakao.com/_xloyal" target="_blank">카카오채널 @로얄발레하우스</a></li>
-    <li><a href="https://www.instagram.com/royal_ballethouse?igsh=YTdrMWs3bHYxYzQ0" target="_blank">인스타그램</a></li>
-    <li><a href="https://blog.naver.com/royal_ballet_house" target="_blank">네이버 블로그</a></li>
-  </ul>
-</div>
-```
-
+    </div>
+    <div class="ft-col">
+      <div class="ft-col-ttl">Quick Links</div>
+      <ul>
+        <li><a href="#about">학원 소개</a></li>
+        <li><a href="#programs">수업 안내</a></li>
+        <li><a href="#teachers">강사 소개</a></li>
+        <li><a href="#schedule">화이트홀 대관</a></li>
+        <li><a href="#location">오시는 길</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <div class="ft-col-ttl">Contact</div>
+      <ul>
+        <li><a href="tel:01097820903">010-9782-0903</a></li>
+        <li><a href="https://pf.kakao.com/_xloyal" target="_blank">카카오채널 @로얄발레하우스</a></li>
+        <li><a href="https://www.instagram.com/royal_ballethouse?igsh=YTdrMWs3bHYxYzQ0" target="_blank">인스타그램</a></li>
+        <li><a href="https://blog.naver.com/royal_ballet_house" target="_blank">네이버 블로그</a></li>
+      </ul>
+    </div>
   </div>
   <div class="ft-bottom">
     <span class="ft-copy">© 2026 Royal Ballet House. All rights reserved.</span>
@@ -1413,7 +1380,6 @@ button, a { touch-action: manipulation; }
 </footer>
 
 <!-- LOGIN MODAL -->
-
 <div class="modal-bg" id="login-modal">
   <div class="modal-box">
     <button class="modal-x" id="close-login">✕</button>
@@ -1433,7 +1399,6 @@ button, a { touch-action: manipulation; }
 </div>
 
 <!-- ADMIN PANEL -->
-
 <div id="ap">
   <div class="ap-hd">
     <div class="ap-hd-ttl">Royal Ballet House — <span>관리자 패널</span></div>
@@ -1478,290 +1443,288 @@ button, a { touch-action: manipulation; }
       <div class="add-ok" id="add-fixed-ok">✓ 고정 수업이 추가되었습니다.</div>
     </div>
 
-```
-<div class="add-box">
-  <div class="add-ttl">새 예약 추가</div>
-  <div style="display:flex;flex-direction:column;gap:14px;">
-    <div class="f" style="margin:0"><label>날짜</label><input type="date" id="f-date"></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <div class="f" style="margin:0"><label>시작 시간</label><select id="f-start"></select></div>
-      <div class="f" style="margin:0"><label>종료 시간</label><select id="f-end"></select></div>
+    <div class="add-box">
+      <div class="add-ttl">새 예약 추가</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="f" style="margin:0"><label>날짜</label><input type="date" id="f-date"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="f" style="margin:0"><label>시작 시간</label><select id="f-start"></select></div>
+          <div class="f" style="margin:0"><label>종료 시간</label><select id="f-end"></select></div>
+        </div>
+        <div class="f" style="margin:0"><label>예약자명</label><input type="text" id="f-name" placeholder="예: 홍길동"></div>
+        <div class="f" style="margin:0"><label>용도</label><input type="text" id="f-purpose" placeholder="예: 개인 연습"></div>
+        <div class="f" style="margin:0"><label>연락처 (선택)</label><input type="text" id="f-contact" placeholder="010-0000-0000"></div>
+      </div>
+      <button class="add-btn" id="add-btn">예약 추가</button>
+      <div class="add-ok" id="add-ok">✓ 예약이 성공적으로 추가되었습니다.</div>
     </div>
-    <div class="f" style="margin:0"><label>예약자명</label><input type="text" id="f-name" placeholder="예: 홍길동"></div>
-    <div class="f" style="margin:0"><label>용도</label><input type="text" id="f-purpose" placeholder="예: 개인 연습"></div>
-    <div class="f" style="margin:0"><label>연락처 (선택)</label><input type="text" id="f-contact" placeholder="010-0000-0000"></div>
-  </div>
-  <button class="add-btn" id="add-btn">예약 추가</button>
-  <div class="add-ok" id="add-ok">✓ 예약이 성공적으로 추가되었습니다.</div>
-</div>
 
-<!-- 사진 관리 -->
-<div class="ap-sec-ttl" style="margin-top:48px;">사진 관리</div>
-<div class="photo-mgmt-grid">
-  <div class="photo-mgmt-card" id="mgmt-about">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-about" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-about">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">학원 소개 사진</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('about')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'about')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('about')">삭제</button>
+    <!-- 사진 관리 -->
+    <div class="ap-sec-ttl" style="margin-top:48px;">사진 관리</div>
+    <div class="photo-mgmt-grid">
+      <div class="photo-mgmt-card" id="mgmt-about">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-about" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-about">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">학원 소개 사진</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('about')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'about')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('about')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-hall1">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-hall1" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-hall1">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">화이트홀 사진 1</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('hall1')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall1')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('hall1')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-hall2">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-hall2" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-hall2">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">화이트홀 사진 2</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('hall2')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall2')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('hall2')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-hall3">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-hall3" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-hall3">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">화이트홀 사진 3</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('hall3')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall3')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('hall3')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-space1">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-space1" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-space1">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">학원 공간 사진 1</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('space1')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space1')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('space1')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-space2">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-space2" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-space2">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">학원 공간 사진 2</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('space2')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space2')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('space2')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-space3">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-space3" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-space3">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">학원 공간 사진 3</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('space3')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space3')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('space3')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-class1">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-class1" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-class1">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">수업 사진 1</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('class1')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class1')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('class1')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-class2">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-class2" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-class2">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">수업 사진 2</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('class2')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class2')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('class2')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-class3">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-class3" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-class3">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">수업 사진 3</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('class3')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class3')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('class3')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher1">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher1" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher1">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 1 (이은주)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher1')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher1')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher1')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher2">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher2" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher2">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 2 (국찬우)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher2')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher2')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher2')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher3">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher3" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher3">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 3 (김민영)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher3')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher3')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher3')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher4">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher4" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher4">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 4 (이예진)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher4')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher4')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher4')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher5">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher5" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher5">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 5 (정세환)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher5')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher5')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher5')">삭제</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo-mgmt-card" id="mgmt-teacher6">
+        <div class="photo-mgmt-thumb">
+          <img id="mgmt-img-teacher6" src="" alt="" style="display:none;">
+          <div class="no-photo" id="mgmt-no-teacher6">사진 없음</div>
+        </div>
+        <div class="photo-mgmt-info">
+          <div class="photo-mgmt-label">강사 사진 6 (강나후)</div>
+          <div class="photo-mgmt-btns">
+            <button class="btn-photo-replace" onclick="mgmtReplace('teacher6')">
+              교체
+              <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher6')">
+            </button>
+            <button class="btn-photo-delete" onclick="mgmtDelete('teacher6')">삭제</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-hall1">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-hall1" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-hall1">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">화이트홀 사진 1</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('hall1')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall1')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('hall1')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-hall2">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-hall2" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-hall2">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">화이트홀 사진 2</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('hall2')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall2')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('hall2')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-hall3">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-hall3" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-hall3">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">화이트홀 사진 3</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('hall3')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall3')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('hall3')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-space1">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-space1" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-space1">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">학원 공간 사진 1</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('space1')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space1')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('space1')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-space2">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-space2" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-space2">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">학원 공간 사진 2</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('space2')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space2')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('space2')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-space3">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-space3" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-space3">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">학원 공간 사진 3</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('space3')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space3')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('space3')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-class1">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-class1" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-class1">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">수업 사진 1</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('class1')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class1')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('class1')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-class2">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-class2" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-class2">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">수업 사진 2</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('class2')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class2')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('class2')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-class3">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-class3" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-class3">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">수업 사진 3</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('class3')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class3')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('class3')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-teacher1">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-teacher1" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-teacher1">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">강사 사진 1 (이은주)</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('teacher1')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher1')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('teacher1')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-teacher2">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-teacher2" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-teacher2">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">강사 사진 2 (국찬우)</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('teacher2')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher2')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('teacher2')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-teacher3">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-teacher3" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-teacher3">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">강사 사진 3 (김민영)</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('teacher3')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher3')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('teacher3')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-teacher4">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-teacher4" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-teacher4">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">강사 사진 4 (이예진)</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('teacher4')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher4')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('teacher4')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-teacher5">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-teacher5" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-teacher5">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">강사 사진 5 (정세환)</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('teacher5')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher5')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('teacher5')">삭제</button>
-      </div>
-    </div>
-  </div>
-  <div class="photo-mgmt-card" id="mgmt-teacher6">
-    <div class="photo-mgmt-thumb">
-      <img id="mgmt-img-teacher6" src="" alt="" style="display:none;">
-      <div class="no-photo" id="mgmt-no-teacher6">사진 없음</div>
-    </div>
-    <div class="photo-mgmt-info">
-      <div class="photo-mgmt-label">강사 사진 6 (강나후)</div>
-      <div class="photo-mgmt-btns">
-        <button class="btn-photo-replace" onclick="mgmtReplace('teacher6')">
-          교체
-          <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher6')">
-        </button>
-        <button class="btn-photo-delete" onclick="mgmtDelete('teacher6')">삭제</button>
-      </div>
-    </div>
-  </div>
-</div>
-```
 
   </div>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <script>
 /* ══════════════════════════════════════════
    ⚠️  아래 두 줄에 본인 Supabase 값을 입력하세요
@@ -2106,16 +2069,24 @@ function showPhoto(slotId, imgId, url) {
 
 // 페이지 로드 시 Supabase Storage에서 사진 복원
 async function restorePhotos() {
-  const { data: files, error } = await _supabase.storage.from('photos').list('site', { limit: 100 });
-  if (error || !files) return;
+  const BUCKET_URL = `${SUPABASE_URL}/storage/v1/object/public/photos/site/`;
   const slots = ['about','hall1','hall2','hall3','space1','space2','space3','class1','class2','class3','teacher1','teacher2','teacher3','teacher4','teacher5','teacher6'];
-  slots.forEach(s => {
-    const match = files.find(f => f.name.startsWith(`slot-${s}.`));
-    if (match) {
-      const { data } = _supabase.storage.from('photos').getPublicUrl(`site/${match.name}`);
-      showPhoto('slot-' + s, 'img-' + s, data.publicUrl + '?t=' + Date.now());
+  const exts = ['jpeg','jpg','png','webp'];
+
+  async function tryRestore(s) {
+    for (const ext of exts) {
+      const url = BUCKET_URL + `slot-${s}.${ext}?t=` + Date.now();
+      const ok = await new Promise(resolve => {
+        const t = new Image();
+        t.onload  = () => resolve(true);
+        t.onerror = () => resolve(false);
+        t.src = url;
+      });
+      if (ok) { showPhoto('slot-' + s, 'img-' + s, url); return; }
     }
-  });
+  }
+
+  await Promise.all(slots.map(s => tryRestore(s)));
 }
 
 
@@ -2190,31 +2161,39 @@ document.getElementById('add-fixed-btn').onclick = async () => {
 
 /* ── PHOTO MANAGEMENT (관리자 패널) ── */
 async function mgmtLoadPhotos() {
-  // Supabase list()로 실제 파일 목록 가져오기
-  const { data: files, error } = await _supabase.storage.from('photos').list('site', { limit: 100 });
-  if (error) { console.error('photo list error', error); return; }
-
+  const BUCKET_URL = `${SUPABASE_URL}/storage/v1/object/public/photos/site/`;
   const slots = ['about','hall1','hall2','hall3','space1','space2','space3',
                  'class1','class2','class3',
                  'teacher1','teacher2','teacher3','teacher4','teacher5','teacher6'];
+  const exts = ['jpeg','jpg','png','webp'];
 
-  slots.forEach(s => {
-    // 교체 버튼 활성화
+  // 확장자를 순서대로 하나씩 시도하는 함수
+  async function tryLoadImg(s) {
     const btn = document.querySelector(`#mgmt-${s} .btn-photo-replace`);
     if (btn) btn.classList.add('admin-active');
 
-    if (!files) return;
-    // slot-{s}.{ext} 형태의 파일 찾기
-    const match = files.find(f => f.name.startsWith(`slot-${s}.`));
-    if (match) {
-      const { data } = _supabase.storage.from('photos').getPublicUrl(`site/${match.name}`);
-      const url = data.publicUrl + '?t=' + Date.now();
-      const img = document.getElementById('mgmt-img-' + s);
-      const no  = document.getElementById('mgmt-no-' + s);
-      if (img) { img.src = url; img.style.display = 'block'; }
-      if (no)  { no.style.display = 'none'; }
+    const img = document.getElementById('mgmt-img-' + s);
+    const no  = document.getElementById('mgmt-no-' + s);
+    if (!img) return;
+
+    for (const ext of exts) {
+      const url = BUCKET_URL + `slot-${s}.${ext}?t=` + Date.now();
+      const ok = await new Promise(resolve => {
+        const t = new Image();
+        t.onload  = () => resolve(true);
+        t.onerror = () => resolve(false);
+        t.src = url;
+      });
+      if (ok) {
+        img.src = url;
+        img.style.display = 'block';
+        if (no) no.style.display = 'none';
+        return;
+      }
     }
-  });
+  }
+
+  await Promise.all(slots.map(s => tryLoadImg(s)));
 }
 
 function mgmtReplace(slotId) {
@@ -2268,6 +2247,5 @@ async function mgmtDelete(slotId) {
 renderPub();
 restorePhotos();
 </script>
-
 </body>
 </html>
