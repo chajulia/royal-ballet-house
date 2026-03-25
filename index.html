@@ -2075,14 +2075,14 @@ async function restorePhotos() {
 
   async function tryRestore(s) {
     for (const ext of exts) {
-      const url = BUCKET_URL + `slot-${s}.${ext}?t=` + Date.now();
+      const url = BUCKET_URL + `slot-${s}.${ext}`;
       const ok = await new Promise(resolve => {
         const t = new Image();
         t.onload  = () => resolve(true);
         t.onerror = () => resolve(false);
         t.src = url;
       });
-      if (ok) { showPhoto('slot-' + s, 'img-' + s, url); return; }
+      if (ok) { showPhoto('slot-' + s, 'img-' + s, url + '?t=' + Date.now()); return; }
     }
   }
 
@@ -2177,7 +2177,7 @@ async function mgmtLoadPhotos() {
     if (!img) return;
 
     for (const ext of exts) {
-      const url = BUCKET_URL + `slot-${s}.${ext}?t=` + Date.now();
+      const url = BUCKET_URL + `slot-${s}.${ext}`;
       const ok = await new Promise(resolve => {
         const t = new Image();
         t.onload  = () => resolve(true);
@@ -2185,7 +2185,7 @@ async function mgmtLoadPhotos() {
         t.src = url;
       });
       if (ok) {
-        img.src = url;
+        img.src = url + '?t=' + Date.now();
         img.style.display = 'block';
         if (no) no.style.display = 'none';
         return;
