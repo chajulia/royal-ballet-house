@@ -579,12 +579,12 @@ body {
 
   /* ── GALLERY ── */
   .gallery-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: unset;
-    gap: 6px;
+    gap: 8px;
   }
-  .gallery-grid .photo-slot { height: auto !important; aspect-ratio: 1/1; }
-  .gallery-grid .photo-slot:first-child { grid-row: auto; grid-column: 1 / 3; aspect-ratio: 16/9; }
+  .gallery-grid .photo-slot { height: auto !important; aspect-ratio: 4/3; }
+  .gallery-grid .photo-slot:first-child { grid-row: auto; grid-column: auto; aspect-ratio: 4/3; }
 
   /* ── PROGRAMS ── */
   .programs-grid { grid-template-columns: 1fr; gap: 1px; }
@@ -730,13 +730,11 @@ body {
 /* ─── SPACE GALLERY (화이트홀 + 학원 공간) ─── */
 .gallery-section { background: var(--blush); }
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 300px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 6px; margin-top: 52px;
 }
 .gallery-grid .photo-slot:first-child { grid-row: auto; }
-.gallery-grid .photo-slot { height: 300px; }
+.gallery-grid .photo-slot { height: 280px; }
 .gallery-grid .photo-slot img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ─── SPACE PHOTO STRIP ─── */
