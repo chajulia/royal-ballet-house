@@ -1443,6 +1443,22 @@ button, a { touch-action: manipulation; }
       <div class="add-ok" id="add-fixed-ok">✓ 고정 수업이 추가되었습니다.</div>
     </div>
 
+    <div class="add-box">
+      <div class="add-ttl">새 예약 추가</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="f" style="margin:0"><label>날짜</label><input type="date" id="f-date"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="f" style="margin:0"><label>시작 시간</label><select id="f-start"></select></div>
+          <div class="f" style="margin:0"><label>종료 시간</label><select id="f-end"></select></div>
+        </div>
+        <div class="f" style="margin:0"><label>예약자명</label><input type="text" id="f-name" placeholder="예: 홍길동"></div>
+        <div class="f" style="margin:0"><label>용도</label><input type="text" id="f-purpose" placeholder="예: 개인 연습"></div>
+        <div class="f" style="margin:0"><label>연락처 (선택)</label><input type="text" id="f-contact" placeholder="010-0000-0000"></div>
+      </div>
+      <button class="add-btn" id="add-btn">예약 추가</button>
+      <div class="add-ok" id="add-ok">✓ 예약이 성공적으로 추가되었습니다.</div>
+    </div>
+
     <!-- 사진 관리 -->
     <div class="ap-sec-ttl" style="margin-top:48px;">사진 관리</div>
     <div class="photo-mgmt-grid">
@@ -1704,21 +1720,9 @@ button, a { touch-action: manipulation; }
       </div>
     </div>
 
-    <div class="add-box">
-      <div class="add-ttl">새 예약 추가</div>
-      <div class="add-grid">
-        <div class="f" style="margin:0"><label>날짜</label><input type="date" id="f-date"></div>
-        <div class="f" style="margin:0"><label>시작 시간</label><select id="f-start"></select></div>
-        <div class="f" style="margin:0"><label>종료 시간</label><select id="f-end"></select></div>
-        <div class="f" style="margin:0"><label>예약자명</label><input type="text" id="f-name" placeholder="예: 홍길동"></div>
-        <div class="f" style="margin:0"><label>용도</label><input type="text" id="f-purpose" placeholder="예: 개인 연습"></div>
-        <div class="f" style="margin:0"><label>연락처 (선택)</label><input type="text" id="f-contact" placeholder="010-0000-0000"></div>
-      </div>
-      <button class="add-btn" id="add-btn">예약 추가</button>
-      <div class="add-ok" id="add-ok">✓ 예약이 성공적으로 추가되었습니다.</div>
-    </div>
   </div>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
