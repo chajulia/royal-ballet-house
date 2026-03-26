@@ -822,13 +822,12 @@ body {
   flex: 1; padding: 7px 0; background: var(--deep); color: var(--white);
   border: none; cursor: pointer; font-size: 0.65rem; letter-spacing: 0.1em;
   font-family: 'Noto Sans KR', sans-serif; position: relative;
-  touch-action: manipulation;
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
 }
 .btn-photo-replace input[type=file] {
   position: absolute; inset: 0; opacity: 0; cursor: pointer;
-  width: 100%; height: 100%; pointer-events: none;
+  width: 100%; height: 100%; pointer-events: all;
 }
-.btn-photo-replace.admin-active input[type=file] { pointer-events: all; }
 .btn-photo-delete {
   padding: 7px 10px; background: none; color: var(--deep);
   border: 1px solid var(--border); cursor: pointer; font-size: 0.65rem;
@@ -1470,7 +1469,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">학원 소개 사진</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('about')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'about')">
             </button>
@@ -1486,7 +1485,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">화이트홀 사진 1</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('hall1')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall1')">
             </button>
@@ -1502,7 +1501,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">화이트홀 사진 2</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('hall2')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall2')">
             </button>
@@ -1518,7 +1517,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">화이트홀 사진 3</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('hall3')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'hall3')">
             </button>
@@ -1534,7 +1533,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">학원 공간 사진 1</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('space1')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space1')">
             </button>
@@ -1550,7 +1549,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">학원 공간 사진 2</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('space2')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space2')">
             </button>
@@ -1566,7 +1565,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">학원 공간 사진 3</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('space3')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'space3')">
             </button>
@@ -1582,7 +1581,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">수업 사진 1</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('class1')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class1')">
             </button>
@@ -1598,7 +1597,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">수업 사진 2</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('class2')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class2')">
             </button>
@@ -1614,7 +1613,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">수업 사진 3</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('class3')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'class3')">
             </button>
@@ -1630,7 +1629,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">강사 사진 1 (이은주)</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('teacher1')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher1')">
             </button>
@@ -1646,7 +1645,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">강사 사진 2 (국찬우)</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('teacher2')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher2')">
             </button>
@@ -1662,7 +1661,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">강사 사진 3 (김민영)</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('teacher3')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher3')">
             </button>
@@ -1678,7 +1677,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">강사 사진 4 (이예진)</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('teacher4')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher4')">
             </button>
@@ -1694,7 +1693,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">강사 사진 5 (정세환)</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('teacher5')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher5')">
             </button>
@@ -1710,7 +1709,7 @@ button, a { touch-action: manipulation; }
         <div class="photo-mgmt-info">
           <div class="photo-mgmt-label">강사 사진 6 (강나후)</div>
           <div class="photo-mgmt-btns">
-            <button class="btn-photo-replace" onclick="mgmtReplace('teacher6')">
+            <button class="btn-photo-replace">
               교체
               <input type="file" accept="image/*" onchange="mgmtHandleReplace(this,'teacher6')">
             </button>
@@ -2170,9 +2169,6 @@ async function mgmtLoadPhotos() {
 
   // 확장자를 순서대로 하나씩 시도하는 함수
   async function tryLoadImg(s) {
-    const btn = document.querySelector(`#mgmt-${s} .btn-photo-replace`);
-    if (btn) btn.classList.add('admin-active');
-
     const img = document.getElementById('mgmt-img-' + s);
     const no  = document.getElementById('mgmt-no-' + s);
     if (!img) return;
@@ -2189,17 +2185,16 @@ async function mgmtLoadPhotos() {
         img.src = url + '?t=' + Date.now();
         img.style.display = 'block';
         if (no) no.style.display = 'none';
+        // 사진 있으면 버튼 "교체"
+        if (btn) btn.childNodes[0].textContent = '교체 ';
         return;
       }
     }
+    // 사진 없으면 버튼 "업로드"
+    if (btn) btn.childNodes[0].textContent = '업로드 ';
   }
 
   await Promise.all(slots.map(s => tryLoadImg(s)));
-}
-
-function mgmtReplace(slotId) {
-  const input = document.querySelector(`#mgmt-${slotId} .btn-photo-replace input[type=file]`);
-  if (input) input.click();
 }
 
 async function mgmtHandleReplace(input, slotId) {
@@ -2218,7 +2213,9 @@ async function mgmtHandleReplace(input, slotId) {
   if (no)  { no.style.display = 'none'; }
   // 홈페이지 슬롯도 갱신
   showPhoto('slot-' + slotId, 'img-' + slotId, url);
-  alert('✓ 사진이 교체됐습니다.');
+  const btn = document.querySelector(`#mgmt-${slotId} .btn-photo-replace`);
+  if (btn) btn.childNodes[0].textContent = '교체 ';
+  alert('✓ 사진이 업로드됐습니다.');
 }
 
 async function mgmtDelete(slotId) {
@@ -2241,6 +2238,8 @@ async function mgmtDelete(slotId) {
   const mainSlot = document.getElementById('slot-' + slotId);
   if (mainImg) { mainImg.src = ''; mainImg.style.display = 'none'; }
   if (mainSlot) mainSlot.classList.remove('has-photo');
+  const dBtn = document.querySelector(`#mgmt-${slotId} .btn-photo-replace`);
+  if (dBtn) dBtn.childNodes[0].textContent = '업로드 ';
   alert('✓ 사진이 삭제됐습니다.');
 }
 
