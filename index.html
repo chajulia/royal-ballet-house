@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Royal Ballet House</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YD9EWZVYG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YD9EWZVYG4');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- 한글 폰트 preload (모바일 최적화) -->
@@ -1224,7 +1232,6 @@ button, a { touch-action: manipulation; }
     <div class="tt-tabs">
       <button class="tt-tab active" onclick="switchTab('adult')">성인반</button>
       <button class="tt-tab" onclick="switchTab('student')">학생반</button>
-      <button class="tt-tab" onclick="switchTab('junior')">유치·초등 기초반</button>
     </div>
 
     <!-- 성인반 -->
@@ -1236,6 +1243,7 @@ button, a { touch-action: manipulation; }
           <tr><td>월·수·금</td><td>10:00–11:20</td><td><span class="level-tag lv-adult">Intermediate</span></td><td class="teacher-tag">국찬우</td></tr>
           <tr><td>월·수·금</td><td>11:30–13:00</td><td><span class="level-tag lv-adult">Advanced</span></td><td class="teacher-tag">국찬우</td></tr>
           <tr class="day-badge-row"><td colspan="4">Morning Programme — 화 / 목</td></tr>
+          <tr><td>월·수</td><td>11:00–12:00</td><td><span class="level-tag lv-adult">Beginner <span style="font-size:0.85em;opacity:0.7;">1층 화이트홀</span></span></td><td class="teacher-tag">이은주</td></tr>
           <tr><td>화·목</td><td>11:00–12:20</td><td><span class="level-tag lv-adult">Elementary</span></td><td class="teacher-tag">이은주</td></tr>
           <tr class="day-badge-row"><td colspan="4">Evening Programme — 월 / 수</td></tr>
           <tr><td>월·수</td><td>19:30–21:00</td><td><span class="level-tag lv-adult">Intermediate</span></td><td class="teacher-tag">김민영</td></tr>
@@ -1244,8 +1252,7 @@ button, a { touch-action: manipulation; }
           <tr><td>화·목</td><td>19:30–20:30</td><td><span class="level-tag lv-adult">Beginner 1</span></td><td class="teacher-tag">정세환</td></tr>
           <tr><td>화·목</td><td>20:40–21:40</td><td><span class="level-tag lv-adult">Beginner 2</span></td><td class="teacher-tag">정세환</td></tr>
           <tr><td>화·목</td><td>20:00–21:20</td><td><span class="level-tag lv-adult">Elementary</span></td><td class="teacher-tag">강나후</td></tr>
-          <tr class="day-badge-row"><td colspan="4">월수 저녁 — Intensive</td></tr>
-          <tr><td>월·수</td><td>17:30–19:00</td><td><span class="level-tag lv-special">Intensive 전공반</span></td><td class="teacher-tag">김민영</td></tr>
+
         </tbody>
       </table>
     </div>
@@ -1253,36 +1260,27 @@ button, a { touch-action: manipulation; }
     <!-- 어린이·학생반 -->
     <div class="tt-pane" id="pane-student">
       <table class="class-table">
-        <thead><tr><th>요일</th><th>시간</th><th>클래스</th></tr></thead>
+        <thead><tr><th>요일</th><th>시간</th><th>클래스</th><th>장소</th></tr></thead>
         <tbody>
-          <tr class="day-badge-row"><td colspan="3">월 / 수 / 금</td></tr>
-          <tr><td>월·수·금</td><td>15:20–16:20</td><td><span class="level-tag lv-youth">영재반 (Gifted Class)</span></td></tr>
-          <tr><td>월·수·금</td><td>16:30–17:30</td><td><span class="level-tag lv-child">Elite Class 엘리트반</span></td></tr>
-          <tr><td>월·수·금</td><td>17:30–19:30</td><td><span class="level-tag lv-special">Intensive 전공반</span></td></tr>
-          <tr class="day-badge-row"><td colspan="3">화 / 목</td></tr>
-          <tr><td>화·목</td><td>15:30–16:20</td><td><span class="level-tag lv-child">Primary 초등기초 (8-10y)</span></td></tr>
-          <tr><td>화·목</td><td>16:30–17:20</td><td><span class="level-tag lv-child">Pre-Elementary (7-8y)</span></td></tr>
-          <tr><td>화·목</td><td>17:30–19:30</td><td><span class="level-tag lv-special">Intensive 전공반</span></td></tr>
-          <tr><td>화·목</td><td>19:30–17:30</td><td><span class="level-tag lv-special">Vaganova 2 바가노바</span></td></tr>
-          <tr><td>화·목</td><td>19:00–19:50</td><td><span class="level-tag lv-special">Pointe Work Class</span></td></tr>
+          <tr class="day-badge-row"><td colspan="4">월 / 수 / 금</td></tr>
+          <tr><td>월·수·금</td><td>3:20–4:20</td><td><span class="level-tag lv-youth">영재반</span></td><td>5층 메인홀</td></tr>
+          <tr><td>월·수·금</td><td>4:30–5:30</td><td><span class="level-tag lv-child">엘리트반</span></td><td>5층 메인홀</td></tr>
+          <tr><td>월·수·금</td><td>5:30–7:30</td><td><span class="level-tag lv-special">전공반</span></td><td>5층 메인홀</td></tr>
+          <tr class="day-badge-row"><td colspan="4">월 / 수 — 1층 화이트홀</td></tr>
+          <tr><td>월·수</td><td>3:30–4:20</td><td><span class="level-tag lv-child">초등기초 (8-10y)</span></td><td>1층 화이트홀</td></tr>
+          <tr><td>월·수</td><td>4:30–5:20</td><td><span class="level-tag lv-child">유치부 (6y)</span></td><td>1층 화이트홀</td></tr>
+          <tr><td>월·수</td><td>4:30–5:20</td><td><span class="level-tag lv-child">예비초등반 (7-8y)</span></td><td>1층 화이트홀</td></tr>
+          <tr class="day-badge-row"><td colspan="4">화 / 목</td></tr>
+          <tr><td>화·목</td><td>3:30–4:20</td><td><span class="level-tag lv-child">초등기초 (8-10y)</span></td><td>1층 화이트홀</td></tr>
+          <tr><td>화·목</td><td>4:30–5:20</td><td><span class="level-tag lv-child">예비초등반 (7-8y)</span></td><td>1층 화이트홀</td></tr>
+          <tr><td>화·목</td><td>4:30–5:20</td><td><span class="level-tag lv-child">예비초등반 (7-8y) <span style="color:var(--dusty);font-size:0.88em;">모집중</span></span></td><td>5층 메인홀</td></tr>
+          <tr><td>화·목</td><td>5:30–6:50</td><td><span class="level-tag lv-special" style="font-style:italic;">바가노바</span></td><td></td></tr>
+          <tr><td>화·목</td><td>7:00–7:50</td><td><span class="level-tag lv-special">학생 토슈즈</span></td><td></td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- 유치·초등 기초반 -->
-    <div class="tt-pane" id="pane-junior">
-      <table class="class-table">
-        <thead><tr><th>요일</th><th>시간</th><th>클래스</th></tr></thead>
-        <tbody>
-          <tr class="day-badge-row"><td colspan="3">월 / 수</td></tr>
-          <tr><td>월·수</td><td>15:30–16:20</td><td><span class="level-tag lv-child">Primary 초등기초</span></td></tr>
-          <tr><td>월·수</td><td>16:30–17:20</td><td><span class="level-tag lv-child">유치부 Lv.1 (6세)</span></td></tr>
-          <tr class="day-badge-row"><td colspan="3">화 / 목</td></tr>
-          <tr><td>화·목</td><td>15:30–16:20</td><td><span class="level-tag lv-child">Primary 초등기초 (8-10y)</span></td></tr>
-          <tr><td>화·목</td><td>16:30–17:20</td><td><span class="level-tag lv-child">예비초등부 (7-8y)</span></td></tr>
-        </tbody>
-      </table>
-    </div>
+
 
   </div>
 </section>
