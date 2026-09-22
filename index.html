@@ -398,8 +398,8 @@ body {
 .admin-trig:hover { color: var(--gold); }
 
 /* ─── MODAL ─── */
-.modal-bg { position: fixed; inset: 0; z-index: 9000; background: rgba(43,26,30,0.72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
-.modal-bg.open { opacity: 1; pointer-events: all; }
+.modal-bg { position: fixed; inset: 0; z-index: 9000; background: rgba(43,26,30,0.72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+.modal-bg.open { opacity: 1; visibility: visible; pointer-events: all; }
 .modal-box { background: var(--white); width: 420px; max-width: 95vw; padding: 52px 46px; position: relative; animation: fadeUp 0.3s ease both; }
 .modal-x { position: absolute; top: 18px; right: 20px; background: none; border: none; cursor: pointer; font-size: 1.2rem; color: var(--gray); }
 .modal-ttl { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--ink); margin-bottom: 6px; }
@@ -413,8 +413,8 @@ body {
 .modal-btn:hover { background: var(--dusty); }
 
 /* ─── ADMIN PANEL ─── */
-#ap { position: fixed; inset: 0; z-index: 8000; background: var(--mist); display: block; overflow-y: auto; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
-#ap.open { opacity: 1; pointer-events: all; }
+#ap { position: fixed; inset: 0; z-index: 8000; background: var(--mist); display: block; overflow-y: auto; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.2s, visibility 0.2s; }
+#ap.open { opacity: 1; visibility: visible; pointer-events: all; }
 .ap-hd { background: var(--deep); padding: 0 60px; height: 66px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
 .ap-hd-ttl { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: var(--white); letter-spacing: 0.06em; }
 .ap-hd-ttl span { color: var(--gold-lt); font-style: italic; }
